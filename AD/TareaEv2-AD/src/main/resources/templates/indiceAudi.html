@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Guia coches</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+
+            }
+            table {
+                width: 100%;
+                border-collapse: collapse;
+            }
+            th, td {
+                border: 1px solid #ddd;
+                padding: 8px;
+            }
+            th {
+                padding-top: 12px;
+                padding-bottom: 12px;
+                text-align: left;
+                background-color: #4CAF50;
+                color: white;
+            }
+            tr:nth-child(even) {
+                background-color: #f2f2f2;
+            }
+            a {
+                color: #4CAF50;
+                text-decoration: none;
+            }
+            a:hover {
+                color: #008CBA;
+            }
+        </style>
+    </head>
+    <body>
+        <div style="text-align: center;">
+            <h1>Guia coches</h1>
+        </div>
+        <div style="text-align: center">
+             <a th:href="@{/}">Volver a Inicio</a>
+            <a th:href="@{/agregarAudi}">añadir coche</a>
+        </div>
+
+        <br/>
+        <div th:if="${audis != null and !audis.empty}">
+            <table>
+                <tr>
+                    <th>Modelo</th>
+                    <th>Precio</th>
+                    <th>imagen</th>
+                    <th>especificaciones</th>
+                    <th>Editar</th>
+                    <th>Eliminar</th>
+                </tr>
+                <tr th:each="audi : ${audis}">
+                    <td th:text="${audi.modelo}"></td>
+                    <td th:text="${audi.precio}"></td>
+                    <td th:text="${audi.imagen}"></td>
+                    <td th:text="${audi.especificaciones}"></td>
+                    <td><a th:href="@{/editarAudi/} + ${audi.idaudi}" th:text="${audi.modelo}">editar</a></td>
+                    <td><a th:href="@{/eliminarAudi/} + ${audi.idaudi}">eliminar</a></td>
+                </tr>
+            </table>
+        </div>
+        <div th:if="${audis == null or audis.empty}" style="text-align: center">La lista esta vacía</div>
+    </body>
+</html>

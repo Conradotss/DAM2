@@ -1,0 +1,83 @@
+<<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Guia coches</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f5f5f5; /* Fondo blanco grisáceo */
+            color: #333; /* Texto negro */
+            margin: 0;
+            padding: 0;
+        }
+
+        div {
+            text-align: center;
+            padding: 20px;
+            background-color: #4caf50; /* Verde */
+            color: white; /* Texto blanco */
+        }
+
+        table {
+            width: 80%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #4caf50; /* Verde */
+            color: white; /* Texto blanco */
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9; /* Fondo gris para filas pares */
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1 style="margin: 0;">Guía Coches</h1>
+    </div>
+    <table>
+        <tr>
+            <th>Marca</th>
+            <th>Ver</th>
+        </tr>
+        <tr>
+            <td>Audi</td>
+            <td><a th:href="@{/verAudi}">Mas info...</a></td>
+            
+        </tr>
+        <tr>
+            <td>BMW</td>
+            <td><a th:href="@{/verBMW}">Mas info...</a></td>
+            
+        </tr>
+        <tr>
+            <td>Hyundai</td>
+            <td><a th:href="@{/verHyundai}">Mas info...</a></td>
+            
+        </tr>
+        <tr>
+            <td>Mercedes</td>
+            <td><a th:href="@{/verMercedes}">Mas info...</a></td>
+            
+        </tr>
+        <tr>
+            <td>Peugeot</td>
+            <td><a th:href="@{/verPeugeot}">Mas info...</a></td>
+            
+        </tr>
+    </table>
+</body>
+</html>
