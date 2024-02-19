@@ -79,3 +79,19 @@ Para ello en lugar de ejecutar todo el codigo del servidor de forma secuencial, 
 
 ### Perdida de informacion
 La perdida de paquetes en las comunicaciones de red es un factor muy importante que hay que tener en cuenta, para evitar la perdida de estos, cada vez que se envia un paquete el receptor envia al emisor un paquete de confirmacion ACK, en el caso de que el paquete no lleguee correctamente al receptor el paquete de confirmacion no se envia nunca, el emisor cuando transcurre un determinado tiempo considera que el paquete se ha producido un error y vuelve a enviar el paquete. Este metodo aunque efectivo resulta bastante lento ya que para enviar un nuevo paquete debe esperar el ACK del paquete anterior por lo que se produce un retardo en las comunicaciones, una mejora importante del metodo anterior consiste en permitir al emisor que envie multiples paquetes sin necesidad de esperar los paquetes de confirmacion 
+
+
+### Transacciones 
+Uno de los principales fallos de seguridad que se producen en los programas clieten-servidor es que el cliente pueda realizar:
+-Operaciones no autorizadas:
+-Mensajes mal formados:cuando el cliente envia al servidor mensajes mal formados y produzca un error de procesamiento del sistema
+Comandos que puede usar el cliente para ver el flujo de informacion del servidor:
+-ls: va al estado 2 mostrando el contenido del directorio y vuelve al estado 1
+-get: lleva al estado 3 donde le solicita al cliente el nombre del archivo a mostrar, al introducirlo el nombre del archivo se desplaza al estado 4 donde muestra el contenido del archivo y vuelve automaticamente al estado 1
+-exit: lleva directamente al estado donde finaliza la cconexion del cliente(estado -1)
+
+
+### Monitorizar tiempos de respuesta
+Un aspecto importante de nuestra aplicacion son los tiempos de respuesta del servidor, desde que el servidor realiza una peticion hasta que recibe su resultado intervienen dos tiempos:
+-Tiempo de procesamiento: es el tiempo que el servidor necesita para procesar la peticion del cliente y enviar los datos
+-Tiempo de transmision: tiempo que transcurre para que los mensajes viajen a traves de los diferentes dispositivos de la red hasta llegar a su destino
