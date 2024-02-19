@@ -56,3 +56,13 @@ Los protocolos de aplicacion se comunican con el nivel de transporte mediante un
 
 
 ### DNS y resolucion de nombres
+El sistema DNS es el mecanismo que se invento para que los nodos que ofrecen algun tipo de servicio interesante tengan un nombre facil de recordar, lo que se denomina un nombre de dominio, como www.marca.es
+DNS es un sistema de nomenclatura jerarquica para computadoras, servicios o cualquier recurso conectado a internet o una red privada, el objetivo del DNS es traducir los nombres de dominio en las direcciones IP de cada equipo conectado a la red, con el proposito de poder localizar y direccionar estos equipos dentro de la red, este servicio nos da una ventajas:
+-Permite que una misma direccion IP sea compartida por varios dominios
+-Permite que un mismo dominio se corresponda con diferentes direccione IP
+-Permite que cualquier servicio de red pueda cambiar de nodo y por tanto de IP sin cambiar de nombre de dominio
+
+
+
+### Protocolo FTP
+
