@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "623138855528",
+    "project_id": "chatapp-2024-roy",
+    "storage_bucket": "chatapp-2024-roy.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:623138855528:android:431fcb66c80131faaeb9dd",
+        "android_client_info": {
+          "package_name": "com.roy.chatapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAXQQoOv1gHs60qQl3215rS8Wf2z0TCs3c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
