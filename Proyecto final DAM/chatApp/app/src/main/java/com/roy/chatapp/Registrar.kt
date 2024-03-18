@@ -70,6 +70,13 @@ class Registrar : AppCompatActivity() {
             hashmap["imagen"] = ""
             hashmap["buscar"] = nombre_usuario.toLowerCase()
 
+            hashmap["nombre"]= ""
+            hashmap["apellidos"]= ""
+            hashmap["edad"]= ""
+            hashmap["profesion"]= ""
+            hashmap["domicilio"]= ""
+            hashmap["estado"]= "offline"
+
             reference.updateChildren(hashmap).addOnCompleteListener { task2 ->
                 if(task2.isSuccessful){
                     val intent = Intent(applicationContext, MainActivity::class.java)
