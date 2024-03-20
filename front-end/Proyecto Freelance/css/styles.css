@@ -1,0 +1,31 @@
+:root{
+    --blanco: #ffffff;
+    --oscuro: #212121;
+    --primario: #FFC107;
+    --secundario: #0097A7;
+    --gris: #757575;
+
+    --fuente-principal: 3.8rem;
+}
+/*Esta configuracion nos permite trabajar de manera mas facil con la unidad de medida rem
+la cual es la idea para los dispositivos que hoy en dia tiene mucha cantidad de pixeles*/
+html{
+    font-size: 62.5%
+}
+body{
+    font-size: 16px;
+    font-family: "Audiowide", sans-serif;
+}
+
+/*La unidad de medida rem es la mas usada hoy en dia puesto que la gran mayoria de dispositivos
+tienen una gran cantidad de pixeles por pulgada lo que hace que trabajar en pixeles tal vez no 
+sea la manera mas adecuada
+1rem = 1-px aproximadamente*/
+.titulo{
+    text-align: center;
+    color: var(--primario);
+    font-size: var(--fuente-principal);
+}
+.titulo span{
+    font-size: 2rem;
+}
