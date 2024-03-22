@@ -1,0 +1,566 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 27-nov-2016, 13:39:45
+    Author     : Angel
+*/
+
+/*variables globales*/
+:root{
+    -anchuraform: 100%;    
+    -alturaCampo: 10px;
+};
+
+
+
+
+.formbusqueda{
+    width: var(-anchuraform);
+    min-width: 100%;    
+    min-height: 100%;
+    height: auto;
+    margin: 0 auto;
+    /*    padding-top: 50px;
+        padding-bottom: 50px;*/
+    box-sizing: border-box;
+
+
+    background-color:  white;
+    box-shadow: 1px 2px 8px 0px rgba(255,255,255,1);
+    /*background: linear-gradient(to bottom right, white, #f7fff7);*/
+
+    font: bold 14px sans-serif;
+    /*text-align: left;*/    
+    overflow: auto;
+    /*Para dejar un poco de espacio entre el buscador y la tabla*/
+    padding-bottom: 25px;
+}
+
+.formbusqueda #tablaBusqueda{
+    width: 100%;
+    /*min-width: 100%;*/     
+    height: auto;
+
+    /*background-color: #00ff00;*/
+    /*    border-collapse: separate;
+        border: #000000 double;*/
+}
+
+.formbusqueda #tablaBusqueda th, .formbusqueda #tablaBusqueda td{
+    /*width: var(--anchuraform);*/    
+    /*background-color: #00ff00;*/
+    /*    border-collapse: separate;
+        border: #000000 double;*/
+    /*width: auto;*/
+    height: auto;
+    min-width: 100%; 
+
+}
+
+.formbusqueda .formfila{
+    /*text-align: left;*/
+    margin-bottom: 10px; 
+    /*margin-left: 20px;*/
+    height: auto;
+    /*width: 450px;*/
+    /*Color fondo*/
+    /*background-color: #00ff00;*/
+
+}
+
+.formfila{    
+    display: inline-block;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-bottom: 50px;
+    /*background-color: #00ff00;*/
+
+    /*padding-left: 50px;*/   
+}
+.subencabezado {
+    background: rgba(240,240,240,1);
+    background: -moz-linear-gradient(left, rgba(240,240,240,1) 0%, rgba(230,230,230,1) 41%, rgba(210,210,210,1) 100%);
+    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(240,240,240,1)), color-stop(41%, rgba(230,230,230,1)), color-stop(100%, rgba(210,210,210,1)));
+    background: -webkit-linear-gradient(left, rgba(240,240,240,1) 0%, rgba(230,230,230,1) 41%, rgba(210,210,210,1) 100%);
+    background: -o-linear-gradient(left, rgba(240,240,240,1) 0%, rgba(230,230,230,1) 41%, rgba(210,210,210,1) 100%);
+    background: -ms-linear-gradient(left, rgba(240,240,240,1) 0%, rgba(230,230,230,1) 41%, rgba(210,210,210,1) 100%);
+    background: linear-gradient(to right, rgba(240,240,240,1) 0%, rgba(230,230,230,1) 41%, rgba(210,210,210,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#93cede', endColorstr='#49a5bf', GradientType=1 );
+    display:block; border:1px solid #999999;       padding:5px 20px 20px 20px;
+    -webkit-box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.100);
+    -moz-box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.100);
+    box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.100);
+    border-radius: 10px 10px 10px 10px;
+    -moz-border-radius: 10px 10px 10px 10px;
+    -webkit-border-radius: 10px 10px 10px 10px;
+    border: 0px solid #000000;
+}
+.subencabezado label textArea:disabled{
+    background-color: rgba(255,255,255,1);
+}
+.subencabezado label textArea:read-only{
+    background-color: rgba(255,255,255,1);
+}
+
+.formbusqueda span{
+    width: 145px;
+
+}
+
+/*Etiquetas formularios*/
+.formbusqueda .formfila > label span{
+    display: inline-block;
+    box-sizing: border-box;
+    color: #5F5F5F;
+
+    text-align: right;
+    vertical-align: top;
+    padding: 8px 0 0 5px;
+
+}
+
+.formbusqueda .formfila .labelFormulario{
+    display: inline-block;
+    color:  #5f5f5f;
+    box-sizing: border-box;
+    /*    min-width: 500px;*/
+    box-shadow: 1px 2px 4px 0 rgba(0, 0, 0, 0.08);
+    padding: 8px;
+    border: 1px solid #dbdbdb;
+    outline-color: #00ff00;/*foco*/
+    background-color: #ebebe4;
+    border-radius: 5px;
+    font-weight: bold;
+    /*overflow: auto;*/
+
+    /*opacity: 0.3;*/
+
+}
+
+.formbusqueda input{
+    display: inline-block;
+    color:  #5f5f5f;
+    box-sizing: border-box;
+    width: 380px;
+    box-shadow: 1px 2px 4px 0 rgba(0, 0, 0, 0.08);
+    padding: var(-alturaCampo); 
+    border: 1px solid #dbdbdb;
+    outline-color: #00ff00;/*foco*/
+    /*overflow: auto;*/
+    /*padding: 12px 8px;*/
+    border-radius: 5px;
+    /*height: 38px;*/
+
+
+}
+
+.formbusqueda input[type=week]{
+    height: 37px;
+}
+
+.formbusqueda input[type=radio],
+.formbusqueda input[type=checkbox]{
+    box-shadow: none;
+    width: 500px;
+    outline-color: #00ff00;/*foco*/
+    border-radius: 5px;
+    width: auto;
+
+}
+
+.formbusqueda input[type=checkbox]{
+    margin-top: 10px;
+    outline-color: #00ff00;/*foco*/
+    border-radius: 5px;
+
+}
+
+.formbusqueda select{
+    background-color: #ffffff;
+    color:  #5f5f5f;
+    box-sizing: border-box;
+    /*max-width: 500px;*/
+    width: auto;
+    box-shadow: 1px 2px 4px 0 rgba(0, 0, 0, 0.08);
+    padding: var(-alturaCampo);
+    border: 1px solid #dbdbdb;
+    outline-color: #00ff00; /*foco*/
+    border-radius: 5px;
+
+}
+
+.formbusqueda select:expanded{
+    outline-color: #00ff00; /*foco*/
+}
+
+
+.formbusqueda textarea{
+    color:  #5f5f5f;
+    box-sizing: border-box;
+    width: 500px;
+    height: 80px;
+    box-shadow: 1px 2px 4px 0 rgba(0, 0, 0, 0.08);
+    font: normal 13px sans-serif;
+    padding: var(-alturaCampo); 
+    border: 1px solid #dbdbdb;
+    resize: vertical;
+    outline-color: #00ff00;/*foco*/
+    border-radius: 5px;
+}
+
+.formbusqueda .form-radio-buttons{
+    display: inline-block;
+    vertical-align: top;
+}
+
+.formbusqueda .form-radio-buttons > div{
+    margin-top: 10px;
+}
+
+.formbusqueda .form-radio-buttons label span{
+    margin-left: 8px;
+    color: #5f5f5f;
+    font-weight: normal;
+}
+
+.formbusqueda .form-radio-buttons input{
+    width: auto;
+}
+
+
+/*//////////////Estilo validacion formulario*/
+.formbusqueda label.error{
+    font-size: 0.8em;
+    background-color: red;
+    border-radius: 2px;
+    color: white;
+    font-weight: bold;
+    display: block;
+    margin: 5px 150px;
+    padding: 5px;
+
+}
+
+
+.divBotonesBusqueda{
+    text-align: center;
+    width: auto;
+}
+
+.formbotonesbuscar{
+    text-align: right;
+    display: inline-block;
+    padding: 20px;
+
+    /*background-color: #00ff00;*/
+}
+
+.btn20x20{
+    width: 20px; 
+    height: 20px;
+    cursor: pointer;
+    background: transparent;
+    border-radius: 2px;		
+    background-repeat: no-repeat;  
+    display: inline-block; 
+    outline: none;
+    border: none;
+    border-radius: 5px;		
+    transition-duration: 0.4s;      
+    border: none;
+    margin-top: 50px;
+}
+
+.buttonBuscar, .buttonLimpiar, .buttonCrear, .buttonActualizar, 
+.buttonCrearCesta ,.buttonProducto , .buttonPedido, .buttonCrearDocumentoVenta,
+.buttonCerrarOT, .buttonReabrirOT, .buttonProyectoVenta, .buttonAlbaran, 
+.buttonFactura, .buttonPresupuesto, .buttonIrActuacion, .buttonIrOrdenTrabajo, 
+.buttonFacturaManual, .buttonCopiar, .buttonInforme, .buttonCreaCestaProyecto, .buttonRecepcionGeneral, 
+.buttonBorrarTodo, .buttonAceptarTodo, .buttonArticuloActuacion, .buttonArticuloProyecto,
+.buttonIrOTAsociada, .buttonExportarExcel, .buttonBorrarTodoCesta, .buttonVerPdf
+, .buttonIrMaquina, .buttonIrFamMaquina, .buttonIrZona, .buttonIrActuacionTiempoReal
+, .buttonFacturaRectificativa, .buttonAlbaranRectificativo, .buttonAsociar, .buttonGrupoArticulos{     
+
+    display: inline-block;
+    outline: none;
+    cursor: pointer;
+    width: 32px;
+    height: 32px;
+    background: transparent;
+    border: none;
+    border-radius: 5px;		
+    background-repeat: no-repeat;  
+    transition-duration: 0.4s;      
+    border: none;
+    margin-right: 5px;
+
+}
+
+
+
+.buttonBuscar:hover, .buttonLimpiar:hover, .buttonCrear:hover, 
+.buttonActualizar:hover, .buttonCrearCesta:hover , .buttonProducto:hover, 
+.buttonPedido:hover, .buttonCrearDocumentoVenta:hover, .buttonCerrarOT:hover, 
+.buttonReabrirOT:hover, .buttonProyectoVenta:hover, .buttonAlbaran:hover, 
+.buttonPresupuesto:hover, .buttonFactura:hover, .buttonIrActuacion:hover, 
+.buttonIrOrdenTrabajo:hover, .buttonFacturaManual:hover, .buttonCopiar:hover, 
+.buttonInforme:hover, .buttonCreaCestaProyecto:hover, .buttonRecepcionGeneral:hover, 
+.buttonBorrarTodo:hover, .buttonAceptarTodo:hover, .buttonArticuloActuacion:hover, 
+.buttonArticuloProyecto:hover, .buttonIrOTAsociada:hover, buttonIrOTAsociada:hover, .buttonExportarExcel:hover, 
+buttonBorrarTodoCesta:hover, .buttonVerPdf:hover, .buttonIrMaquina:hover, .buttonIrFamMaquina:hover, .buttonIrZona:hover,
+.buttonIrActuacionTiempoReal:hover, .buttonFacturaRectificativa:hover, .buttonAlbaranRectificativo:hover 
+, .btn20x20:hover , .buttonAsociar:hover , .buttonGrupoArticulos:hover{    
+    box-shadow: 0 2px 4px 0px rgba(0,0,0,0.24),0 1px 2px 0px rgba(0,0,0,0.19);	
+    transform:scale(1.2);	
+    transition-duration: 0.4s;	
+}
+
+.buttonBuscar:active, .buttonLimpiar:active, .buttonCrear:active, 
+.buttonActualizar:active, .buttonCrearCesta:active, .buttonProducto:active, 
+.buttonPedido:active, .buttonCrearDocumentoVenta:active, .buttonCerrarOT:active, 
+.buttonReabrirOT:active, .buttonProyectoVenta:active, .buttonPresupuesto:active, 
+.buttonAlbaran:active, .buttonFactura:active, .buttonIrActuacion:active, 
+.buttonIrOrdenTrabajo:active, .buttonFacturaManual:active, .buttonCopiar:active, 
+.buttonInforme:active, .buttonCreaCestaProyecto:active, .buttonRecepcionGeneral:active, 
+.buttonBorrarTodo:active, .buttonAceptarTodo:active, .buttonArticuloActuacion:active, 
+.buttonArticuloProyecto:active, .buttonIrOTAsociada:active, .buttonExportarExcel:active, 
+.buttonBorrarTodoCesta:active, .buttonVerPdf:active, .buttonIrMaquina:active, .buttonIrFamMaquina:active, .buttonIrZona:active
+,.buttonIrActuacionTiempoReal:active, .buttonFacturaRectificativa:active, .buttonAlbaranRectificativo:active , 
+.btn20x20:active, .buttonAsociar:active, .buttonGrupoArticulos:active{
+    transform:scale(0.7);	
+    transition-duration: 0.2s;	    
+}
+
+.buttonBuscar:disabled, .buttonLimpiar:disabled, .buttonCrear:disabled, 
+.buttonActualizar:disabled, .buttonCrearCesta:disabled, 
+.buttonProducto:disabled, .buttonPedido:disabled, 
+.buttonCrearDocumentoVenta:disabled, .buttonCerrarOT:disabled, 
+.buttonReabrirOT:disabled, .buttonProyectoVenta:disabled,
+.buttonAlbaran:disabled, .buttonPresupuesto:disabled, .buttonFactura:disabled,
+.buttonIrActuacion:disabled, .buttonIrOrdenTrabajo:disabled, 
+.buttonFacturaManual:disabled, .buttonCopiar:disabled, .buttonInforme:disabled
+, .buttonCreaCestaProyecto:disabled, .buttonRecepcionGeneral:disabled,
+.buttonBorrarTodo:disabled, .buttonAceptarTodo:disabled, 
+.buttonArticuloActuacion:disabled, .buttonArticuloProyecto:disabled, 
+.buttonIrOTAsociada:disabled, .buttonExportarExcel:disabled, buttonBorrarTodoCesta:disabled
+.buttonVerPdf:disabled, .buttonIrMaquina:disabled, .buttonIrFamMaquina:disabled, .buttonIrZona:disabled,
+.buttonIrActuacionTiempoReal:disabled, .buttonFacturaRectificativa:disabled, .buttonAlbaranRectificativo:disabled ,
+.btn20x20:disabled ,.buttonAsociar:disabled , .buttonGrupoArticulos:disabled{
+    transform:scale(1);	
+    transition-duration: 0.2s;
+    opacity: 0.2;
+    /*cursor:default;*/  
+    pointer-events: none;    
+} 
+
+.buttonAsociar{
+    background-image: url(../images/32x32/asociar.png);  
+}
+.buttonExportarExcel{
+    background-image: url(../images/32x32/exportarExcel.png);  
+}
+.buttonAceptarTodo{
+    background-image: url(../images/32x32/aceptar.png);  
+}
+.buttonBorrarTodoCesta{
+    background-image: url(../images/32x32/borrarTodo.png);  
+}
+.buttonBorrarTodo{
+    background-image: url(../images/20x20/borrar.png);  
+}
+.buttonCreaCestaProyecto{
+    background-image: url(../images/32x32/proyectoCesta.png);  
+}
+.buttonArticuloActuacion{
+    background-image: url(../images/32x32/articuloActuacion.png);  
+}
+.buttonArticuloProyecto{
+    background-image: url(../images/32x32/articuloProyecto.png);  
+}
+.buttonInforme{
+    background-image: url(../images/32x32/informe.png);  
+}
+.buttonBuscar{
+    background-image: url(../images/32x32/buscar.png);  
+}
+
+.buttonIrMaquina{
+    background-image: url(../images/32x32/maquina.png);  
+}
+
+.buttonVerPdf{
+    background-image: url(../images/32x32/verpdf.png); 
+}
+
+.buttonCrearDocumentoVenta{
+    background-image: url(../images/32x32/CrearDocumentoVentas.png); 
+}
+
+.buttonLimpiar{
+    background-image: url(../images/32x32/limpiar.png); 
+}
+.buttonIrActuacion{
+    background-image: url(../images/32x32/actuacion.png); 
+}
+.buttonIrActuacionTiempoReal{
+    background-image: url(../images/32x32/actuaciontiemporeal.png); 
+}
+.buttonIrOTAsociada{
+    background-image: url(../images/32x32/asociarUsuarioOT.png); 
+}
+.buttonIrOrdenTrabajo{
+    background-image: url(../images/32x32/ordenTrabajo.png); 
+}
+.buttonCopiar{
+    background-image: url(../images/32x32/copiarProyecto.png);
+}
+
+.buttonCerrarOT{
+    background-image: url(../images/32x32/cerrarOT.png); 
+}
+.buttonReabrirOT{
+    background-image: url(../images/32x32/reabrirOT.png); 
+}
+.buttonPresupuesto{
+    background-image: url(../images/32x32/presupuesto.png);  
+}
+.buttonProyectoVenta{
+    background-image: url(../images/32x32/proyectoVenta.png);  
+}
+.buttonAlbaran{
+    background-image: url(../images/32x32/albaran.png);  
+}
+.buttonRecepcionGeneral{
+    background-image: url(../images/32x32/recepcionGeneral.png);  
+}
+.buttonFactura{
+    background-image: url(../images/32x32/factura.png);  
+}
+.buttonFacturaRectificativa{
+    background-image: url(../images/32x32/rectificativa.png);  
+}
+.buttonAlbaranRectificativo{
+    background-image: url(../images/32x32/rectificativos.png);  
+}
+.buttonFacturaManual{
+    background-image: url(../images/32x32/facturaManual.png);  
+}
+
+.buttonCrear{
+    background-image: url(../images/32x32/nuevo.png);  
+}
+.buttonIrZona{
+    background-image: url(../images/32x32/zonas.png);  
+}
+.buttonIrFamMaquina{
+    background-image: url(../images/32x32/familiamaquinas.png);  
+}
+
+.buttonCrearCesta{
+    background-image: url(../images/32x32/irCesta.png);  
+}
+.tabla .buttonCrearCesta{
+    background-image: url(../images/32x32/irCesta.png);  
+}
+
+.buttonActualizar{
+    background-image: url(../images/32x32/actualizar.png);  
+}
+
+.buttonProducto{
+    background-image: url(../images/32x32/producto.png);  
+}
+
+.buttonGrupoArticulos{
+    background-image: url(../images/32x32/producto.png);  
+}
+
+.buttonPedido{
+    background-image: url(../images/32x32/pedido.png);  
+}
+
+
+@media only screen and (max-width:600px){   
+
+
+    div .subencabezado {
+        width: 100% !important;
+        margin: 1px;
+        padding: 0em;
+    }
+
+    .img-contenedor {
+
+        width: auto !important;
+    }
+    audio{
+
+        width: 200px !important;
+    }
+
+    .formbotonesbuscar{
+        /*text-align: right;*/
+        display: inline-block;
+        padding: 20px;
+        text-align: center
+            /*background-color: #00ff00;*/
+    }
+
+
+    .form-basic .form-fila > label span{  
+        /*display: inline;*/        
+        text-align: left;
+        padding: 0 0 5px;   
+
+
+    }
+
+
+    .form-basic .form-fila input{
+        display: inline;
+        width: 100%;
+    }
+
+    .form-basic .form-fila textarea{
+        display: inline;
+        width: 100%;
+        margin-right: 10px;
+    }
+
+    .form-fila select{
+        display: inline;
+        width: 100%;
+    }
+
+
+    /*//////////////Estilo validacion formulario*/
+    .form-fila .form-row label.error{
+        /*font-size: 0.8em;*/
+        /*background-color: red;*/
+        /*        border-radius: 2px;
+                color: white;*/
+        /*font-weight: bold;*/
+        display: block;   
+        width: 100%;
+        margin-top: 5px;
+        margin-left: 0px;    
+        padding: 5px;
+    }
+
+
+    .labelTab {
+        display: inline;
+        padding: 0 1.5em;
+        text-align: center;
+        width: 100%;  
+        margin-bottom: 3px;
+    }
+
+    .divBotonesBusqueda{
+        text-align: center;
+    }
+
+}

@@ -1,0 +1,98 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 02-mar-2017, 22:42:02
+    Author     : OnAngel
+*/
+
+
+.btnTab {
+    height: 2.5em;
+    visibility: hidden;
+    position: fixed;
+   /* display: none;*/
+}
+
+.labelTab {
+    background: #888;  /* Fondo de las pestañas */
+    background-color: #181717;
+    border-radius: 5px;
+    color: #f9f9f9;  /* Color del texto de las pestañas */
+    cursor: pointer;
+    display: table-row;
+    float: left;
+    font-size: 1em;  /* Tamaño del texto de las pestañas */
+    height: 2.5em;
+    line-height: 2.5em;
+    margin-right: 0.25em;
+    padding: 0 1.5em;
+    text-align: center;    
+}
+
+.btnTab:hover + .labelTab {
+    background: #303030;  /* Fondo de las pestañas al pasar el cursor por encima */
+    background: linear-gradient(to bottom right, #4c565e, black);
+    color: #f9f9f9;  /* Color del texto de las pestañas al pasar el cursor por encima */
+}
+
+.btnTab:checked + .labelTab, 
+.labelTab:focus{
+    background: #00ff00;  /* Fondo de las pestañas al presionar */
+    background: linear-gradient(to bottom right, white, #00ff00);
+    color: #303030; /* Color de las pestañas al presionar */
+    position: relative;
+    z-index: 1;
+    /**/
+    -webkit-transition: .1s;
+    -moz-transition: .1s;
+    -o-transition: .1s;
+    -ms-transition: .1s;    
+}
+
+
+#content-1, #content-2, #content-3, #content-4, #content-5, #content-6, #content-7, #content-8, #content-9, #content-10, #content-11, #content-12, #content-13, #content-14
+{
+    /*transition: all linear 1.5s;*/
+    opacity: 0;    
+    position: absolute;
+    z-index: -100;    
+    top: 0px;
+    left: 0px;
+   display: none !important;
+   width: 100%;
+}
+
+
+
+input#tab-1:checked ~ #content-1,
+input#tab-2:checked ~ #content-2,
+input#tab-3:checked ~ #content-3,
+input#tab-4:checked ~ #content-4,
+input#tab-5:checked ~ #content-5,
+input#tab-6:checked ~ #content-6,
+input#tab-7:checked ~ #content-7,
+input#tab-8:checked ~ #content-8,
+input#tab-9:checked ~ #content-9,
+input#tab-10:checked ~ #content-10,
+input#tab-11:checked ~ #content-11,
+input#tab-12:checked ~ #content-12,
+input#tab-13:checked ~ #content-13,
+input#tab-14:checked ~ #content-14
+{
+    opacity: 1;
+    z-index: 100;
+    position: relative;   
+        display: inline-block !important;
+}
+
+
+
+input .visible {
+    /*position: relative;*/
+    visibility: visible !important;
+  /* display: inline-block;*/
+    /*height: auto;*/
+}

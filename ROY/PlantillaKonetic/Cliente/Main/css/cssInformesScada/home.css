@@ -1,0 +1,298 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 03-may-2017, 16:33:26
+    Author     : Onelectric
+*/
+
+.form-basic .form-row .divHome{
+    align-content: center;
+    text-align: center;
+    padding-top: 0px;
+    padding-bottom: 20px;
+    /*    background-color: #00ff00;    */
+}
+
+.form-basic .form-row .botonesHome{
+    align-content: center;
+    text-align: center;
+    padding-top: 0px;
+    padding-bottom: 20px;    
+    /*background-color: #00ff00;*/    
+}
+
+.form-basic .form-row .botonesHome button{
+    background-repeat: no-repeat;
+    display: inline-block;    
+    outline: none;
+    cursor: pointer;
+    width: 96px;
+    height: 96px;
+    background-color: transparent;
+    border: none;
+    border-radius: 7px;   
+    transition-duration: 0.4s;      
+    border: none;
+    /*margenes alrededor de los botones*/
+    margin: 10px 20px 10px 20px;    
+}
+
+
+.form-basic .form-row .botonesHome button:hover{    
+    box-shadow: 0 4px 8px 0px rgba(0,0,0,0.24),0 2px 4px 0px rgba(0,0,0,0.19);	
+    transform:scale(1.2);	
+    transition-duration: 0.4s;	
+    border-radius: 18px;	
+}
+
+
+.form-basic .form-row .botonesHome button:active{
+    transform:scale(0.7);	
+    transition-duration: 0.2s;	
+    border-radius: 20px;
+}
+
+.form-basic .form-row .botonesHome button:disabled{   
+    opacity: 0.3;
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+    filter: grayscale(100%); 
+}
+
+.form-basic .form-row .botonesHome .contButton{
+    /*background-color: #00ff00;*/
+    display: inline-table;
+    text-align: center;    
+    width: auto;
+    height: auto;
+    margin-bottom: 40px;
+}
+
+.form-basic .form-row .botonesHome .labelBoton{
+    /*background-color: #003eff;*/
+    text-align: center;
+    align-content: center;
+    color: #5F5F5F;
+    display: inline;
+}
+
+/************************************Home*******************************************/
+
+.btnConfiguracion{    
+    background-image: url(../images/96x96/configuracion.png);  
+}
+
+.btnCalidad{
+    background-image: url(../images/96x96/calidad.png);  
+}
+
+.btnProduccion{
+    background-image: url(../images/96x96/produccion.png);  
+}
+
+.btnControl{
+    background-image: url(../images/96x96/control.png);  
+}
+
+.btnAdministracion{
+    background-image: url(../images/96x96/administracion.png);  
+}
+
+.btnSupervision{
+    background-image: url(../images/96x96/supervision.png);  
+}
+
+.btnMantenimiento{
+    background-image: url(../images/96x96/mantenimiento.png);  
+}
+
+.btnConexion{
+    background-image: url(../images/96x96/conexion.png);  
+}
+
+.btnLog{
+    background-image: url(../images/96x96/log.png);  
+}
+
+/************************************Home*******************************************/
+
+/************************************Configuracion*******************************************/
+
+.btnEmpresa{
+    background-image: url(../images/96x96/home.png);  
+}
+
+.btnUsuario{
+    background-image: url(../images/96x96/usuario.png);  
+}
+
+.btnDepartamento{
+    background-image: url(../images/96x96/departamentos.png);  
+}
+
+.btnTurno{
+    background-image: url(../images/96x96/turnos.png);  
+}
+
+.btnCliente{
+    background-image: url(../images/96x96/clientes.png);  
+}
+
+.btnEquipo{
+    background-image: url(../images/96x96/equipos.png);  
+}
+
+.btnComSerial{
+    background-image: url(../images/96x96/comunicacion.png);  
+}
+
+.btnComBaseDatos{
+    background-image: url(../images/96x96/baseDatos.png);  
+}
+
+.btnVariable{
+    background-image: url(../images/96x96/variables.png);  
+}
+
+.btnCopiarDatos{
+    background-image: url(../images/96x96/copiarDatos.png);  
+}
+
+.btnLineaTrabajo{
+    background-image: url(../images/96x96/lineaTrabajo.png);  
+}
+
+.btnMaquina{
+    background-image: url(../images/96x96/maquinas.png);  
+}
+.btnLineaTrabajo{
+    background-image: url(../images/96x96/lineaTrabajo.png);  
+}
+
+.btnGrupoRegistro{
+    background-image: url(../images/96x96/lectura.png);  
+}
+
+.btnGrupoEscritura{
+    background-image: url(../images/96x96/escritura.png);  
+}
+
+.btnGrupoVarOTs{
+    background-image: url(../images/96x96/grupoVarOTs.png);  
+}
+
+.btnTarifas{
+    background-image: url(../images/96x96/tarifa.png);  
+}
+
+.btnPeriodos{
+    background-image: url(../images/96x96/periodo.png);  
+}
+
+.btnGestor{
+    background-image: url(../images/96x96/gestor.png);  
+}
+
+.btnGrupoVarControlElectricidad{
+    background-image: url(../images/96x96/grupoVarGVarElect.png);  
+}
+
+.btnGrupoVarControlTempFrio{
+    background-image: url(../images/96x96/tempFrio.png);  
+}
+
+/************************************Configuracion*******************************************/
+
+/************************************Calidad*******************************************/
+.btnRegistros{
+    background-image: url(../images/96x96/registros.png);  
+}
+/************************************Calidad*******************************************/
+
+
+/************************************Producción*******************************************/
+.btnPlaning{
+    background-image: url(../images/96x96/planing.png);  
+}
+
+.btnLotes{
+    background-image: url(../images/96x96/lotes.png);  
+}
+
+.btnOTs{
+    background-image: url(../images/96x96/OTs.png);  
+}
+
+.btnActuacion{
+    background-image: url(../images/96x96/actuacion.png);  
+}
+
+.btnRutaOTs{
+    background-image: url(../images/96x96/ruta.png);  
+}
+
+.btnFamProducto{
+    background-image: url(../images/96x96/famProducto.png);  
+}
+
+.btnProducto{
+    background-image: url(../images/96x96/producto.png);  
+}
+
+.btnConservacion{
+    background-image: url(../images/96x96/conservacion.png);  
+}
+
+.btnEnvase{
+    background-image: url(../images/96x96/envase.png);  
+}
+
+.btnRespOT{
+    background-image: url(../images/96x96/respOTs.png);  
+}
+
+.btnGrupoRespLineas{
+    background-image: url(../images/96x96/grupoRespLineas.png);  
+}
+
+.btnLinea{
+    background-image: url(../images/96x96/respLinea.png);  
+}
+
+.btnVerificar{
+    background-image: url(../images/96x96/calidad.png);  
+}
+
+
+.btnCostes{
+    background-image: url(../images/96x96/costes.png);  
+}
+
+
+/************************************Producción*******************************************/
+
+/************************************Conexiones y estados*******************************************/
+.btnConexEquipos{
+    background-image: url(../images/96x96/conexiones.png);  
+}
+
+.btnSesionUsuario{
+    background-image: url(../images/96x96/sesionUsuario.png);  
+}
+
+.btnConexionesSesionUsuario{
+    background-image: url(../images/96x96/conexionesUsuarios.png);  
+}
+/************************************Conexiones y estados*******************************************/
+
+
+/************************************GMAO*******************************************/
+.btnGMAO{
+    background-image: url(../images/96x96/gmao.png);  
+}
+/************************************GMAO*******************************************/

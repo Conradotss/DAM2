@@ -1,0 +1,587 @@
+
+
+
+.tabla {
+    font-family: Trebuchet MS, Arial, Helvetica, sans-serif;
+    
+    border-collapse: collapse;
+    min-width: 100%;
+    min-height: 100%;
+    box-shadow: 1px 2px 4px 0 rgba(0, 0, 0, 0.08);
+
+}
+
+.nFilasTabla {
+    text-align: center;
+    background-color: #ddd;    
+}
+
+.nFilasTabla span{    
+    color: #333333;
+}
+.nFilasTablaId {
+    text-align: center;
+    background-color: #ddd;    
+}
+
+.nFilasTablaId span{    
+    color: #333333;
+}
+
+.tabla tbody tr td input[type=checkbox] {   
+
+    padding: 0px; 
+
+    margin: 0px;
+
+}
+
+
+.tabla thead tr th {   
+    border: 1px solid #ddd;
+    min-width: 100%; 
+    height: 20px;
+    width: auto;    
+    padding-left: 10px; 
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 30px;
+    text-align: center;
+    background-color: #333333;
+    color: white;
+    opacity: 0.90;
+}
+
+.tabla thead tr .header{
+    background-image: url(../images/20x20/flechas.png);
+    background-repeat: no-repeat;
+    background-position: center right 5px;
+
+    cursor: pointer;
+}
+.tabla thead tr .headerSortUp
+{
+    background-image: url(../images/20x20/ordenDesc.png);
+}
+.tabla thead tr .headerSortDown
+{
+    background-image: url(../images/20x20/ordenAsc.png);
+}
+.tabla thead tr .headerSortDown, table.tabla thead tr .headerSortUp
+{
+    color: #00ff00;
+}
+
+
+
+
+.tabla td{
+    font-family: 'Nunito Sans',Trebuchet MS, Arial, Helvetica, sans-serif;
+    border: 1px solid #ddd;
+    padding: 8px; 
+    height: 10px;
+    width: auto;  
+}
+
+
+.tabla tr:nth-child(even){
+    background-color: #f2f2f2;
+    height: 10px;  
+}
+
+.tabla tr:nth-child(odd){
+    background-color: rgba(255, 255, 255, 1);
+}
+.tablaInformePersonalizado td{
+     font-family: 'Nunito Sans',Trebuchet MS, Arial, Helvetica, sans-serif;
+    
+}
+.tablaInformePersonalizado tr:nth-child(even){
+    background-color: #f2f2f2;
+}
+.tablaInformePersonalizado tr:nth-child(odd){
+    background-color: rgba(255, 255, 255, 1);
+}
+
+
+.tabla tr:hover {
+    background-color: #ddd;       
+}
+
+
+
+
+.tabla button{     
+    display: inline-block;
+    outline: none;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    background: transparent;
+    border: none;
+    border-radius: 2px;		
+    background-repeat: no-repeat;  
+    transition-duration: 0.4s;    
+}
+
+.tabla button:hover {    
+    transform:scale(1.2);	
+    transition-duration: 0.4s;	
+}
+
+
+.tabla button:active{
+    transform:scale(0.7);	
+    transition-duration: 0.2s;	    
+}
+
+.tablaInformePersonalizado button:active{
+    transform:scale(0.7);	
+    transition-duration: 0.2s;	    
+}
+
+.tablaInformePersonalizado button:hover {    
+    transform:scale(1.2);	
+    transition-duration: 0.4s;	
+}
+.botonesPie button:active{
+    transform:scale(0.7);	
+    transition-duration: 0.2s;	    
+}
+
+.botonesPie button:hover {    
+    transform:scale(1.2);	
+    transition-duration: 0.4s;	
+}
+.botonesPie button{     
+    display: inline-block;
+    outline: none;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    background: transparent;
+    border: none;
+    border-radius: 2px;		
+    background-repeat: no-repeat;  
+    transition-duration: 0.4s;    
+}
+.tablaInformePersonalizado button{     
+    display: inline-block;
+    outline: none;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    background: transparent;
+    border: none;
+    border-radius: 2px;		
+    background-repeat: no-repeat;  
+    transition-duration: 0.4s;    
+}
+
+.tabla .buttonTablaEliminar{
+    background-image: url(../images/20x20/borrar.png);    
+}
+
+.tabla .buttonTablaAceptarCesta{    
+    background-image: url(../images/20x20/aceptarCesta.png);    
+}
+
+.tabla .buttonTablaModificar{    
+    background-image: url(../images/20x20/modificar.png);    
+}
+.tabla .buttonTablaIrOT{    
+    background-image: url(../images/20x20/OT.png);    
+}
+.tabla .buttonTablaPlano{    
+    background-image: url(../images/20x20/plano.png);    
+}
+.tabla .buttonTablaRecepcion{    
+    background-image: url(../images/20x20/recepcion.png);    
+}
+
+.tabla .buttonTablaCancelar{    
+    background-image: url(../images/20x20/cancelar.png);    
+}
+.tabla .buttonTablaComparativoPrecio{    
+    background-image: url(../images/20x20/pendiente.png);    
+}
+.tabla .buttonTablaEnviarCorreo{    
+    background-image: url(../images/20x20/email.png);    
+}
+.tabla .buttonTablaContrato{    
+    background-image: url(../images/20x20/contratos.png);    
+}
+.tabla .buttonTablaDesasociar{
+    background-image: url(../images/20x20/desasociar.png);    
+}
+
+.tabla .buttonTablaCorreoEnviado{    
+    background-image: url(../images/20x20/correosEnviados.png);    
+}
+.tabla .buttonTablaArticuloActuacion{    
+    background-image: url(../images/20x20/articuloActuacion.png);    
+}
+.tabla .buttonTablaArticuloProyecto{    
+    background-image: url(../images/20x20/articuloProyecto.png);    
+}
+.tabla .buttonTablaDevolucionArticulos{    
+    background-image: url(../images/20x20/devolucionArticulos.png);    
+}
+.tabla .buttonTablaCostes{    
+    background-image: url(../images/20x20/rendimientos.png);    
+}
+.tabla .buttonTablaPagos{    
+    background-image: url(../images/20x20/pagosUsuario.png);    
+}
+.tabla .buttonTablaDocumento{    
+    background-image: url(../images/20x20/subirDocumentos.png);    
+}
+.tabla .buttonTablaAsociarTarea{    
+    background-image: url(../images/20x20/tareas.png);    
+}
+.tabla .buttonTablaAsociarPropiedades{    
+    background-image: url(../images/20x20/propiedades.png);    
+}
+.tabla .buttonTablaDetalle{    
+    background-image: url(../images/20x20/estados.png);    
+}
+.tabla .buttonTablaInforme{    
+    background-image: url(../images/20x20/informe.png);    
+}
+.tabla .buttonTablaInformeValorado{    
+    background-image: url(../images/20x20/informeValorado.png);    
+}
+.tabla .buttonTablaAlbaran{    
+    background-image: url(../images/20x20/albaran.png);    
+}
+
+.tabla .buttonTablaAlbaranExiste{    
+    background-image: url(../images/20x20/albaranExiste.png);    
+}
+
+.tabla .buttonTablaAlbaranPendiente{    
+    background-image: url(../images/20x20/albaranPendiente.png);    
+}
+
+.tabla .buttonTablaCrear{    
+    background-image: url(../images/20x20/crear.png);    
+}
+
+.tablaInformePersonalizado .buttonTablaCrear{   
+    width: 20px;
+    height: 20px;
+    border: none;
+    background-image: url(../images/20x20/crear.png);    
+}
+.tablaInformePersonalizado .buttonTablaTexto{    
+    width: 20px;
+    height: 20px;
+    border: none;
+    background-image: url(../images/20x20/modificar.png);    
+}
+.tablaInformePersonalizado .buttonTablaMover{    
+    width: 20px;
+    height: 20px;
+    border: none;
+    background-image: url(../images/20x20/sube-baja.png);    
+}
+.tablaInformePersonalizado .buttonTablaCrearImagen{    
+    width: 20px;
+    height: 20px;
+    border: none;
+    background-image: url(../images/20x20/subirDocumentos.png);    
+}
+
+.tablaInformePersonalizado .buttonTablaEliminar{  
+    width: 20px;
+    height: 20px;
+    border: none;
+
+    background-image: url(../images/20x20/borrar.png);    
+}
+
+.tabla .buttonTablaMover{    
+    background-image: url(../images/20x20/sube-baja.png); 
+    cursor: move;
+}
+.tabla .buttonTablaBuscar{    
+    background-image: url(../images/20x20/buscar.png);  
+}
+.tabla .buttonTablaArticulo{    
+    background-image: url(../images/20x20/producto.png);  
+}
+.tabla .buttonTablaGrupoArticulo{    
+    background-image: url(../images/20x20/grupoArticulos.png);  
+}
+
+.tabla .buttonTablaAsociar{    
+    background-image: url(../images/20x20/asociar.png);  
+}
+.tabla .buttonTablaAsociarUsuarioOT{    
+    background-image: url(../images/20x20/asociarUsuarioOT.png);    
+}
+.tabla .buttonTablaVisualizar{    
+    background-image: url(../images/20x20/estados.png);    
+}
+
+.tabla .buttonTablaCopiar{    
+    background-image: url(../images/20x20/copiar.png);    
+}
+
+.tabla .buttonTablaAñadir{    
+    background-image: url(../images/20x20/añadirCesta.png);    
+}
+.tabla .buttonTablaSubir{    
+    background-image: url(../images/20x20/subir.png);    
+}
+.tabla .buttonTablaReSubir{    
+    background-image: url(../images/20x20/sube-baja.png);    
+}
+
+.tabla .buttonTablaGastos{    
+    background-image: url(../images/20x20/gastos.png);    
+}
+.tabla .buttonTablaLocalizacion{    
+    background-image: url(../images/20x20/localizaciones.png);    
+}
+.tabla .buttonTablaDetallePresupuesto{    
+    background-image: url(../images/20x20/detallePresupuesto.png);    
+}
+.tabla .buttonTablaContabilizar{    
+    background-image: url(../images/20x20/ok.png);    
+}
+.tabla .buttonTablaDescontabilizar{    
+    background-image: url(../images/20x20/cancelar.png);    
+}
+
+
+
+.tablaRutaOTMaquinas{
+    font-family: Trebuchet MS, Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    min-width: 100%;
+    min-height: 100%;
+    box-shadow: 1px 2px 4px 0 rgba(0, 0, 0, 0.08);
+}
+
+.tablaRutaOTMaquinas thead tr th {   
+    border: 1px solid #ddd;
+    min-width: 100px; 
+    height: auto;
+    width: auto;    
+
+    padding-left: 10px;
+    padding-right: 30px;
+    text-align: center;
+    background-color: #454545;
+    color: white;
+    opacity: 0.90;
+
+}
+
+.tablaRutaOTMaquinas td{
+    border-left: 2px solid #ddd;
+    height: 20px;
+    min-width: 100px;    
+}
+
+
+.tablaEstadosEquipos{
+    font-family: Trebuchet MS, Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+
+    width: 100%;        
+    box-shadow: 1px 2px 4px 0 rgba(0, 0, 0, 0.08);
+}
+
+.tablaEstadosEquipos thead tr th {   
+    border: 1px solid #ddd;
+    height: 20px;
+    width: auto;    
+
+    padding-left: 10px; 
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 30px;
+    text-align: center;
+    background-color: #333333;
+    color: white;
+    opacity: 0.90;
+
+}
+
+.tablaEstadosEquipos thead tr .header{
+    background-image: url(../images/20x20/sube-baja.png);
+    background-repeat: no-repeat;
+    background-position: center right 5px;
+
+    cursor: pointer;
+}
+
+
+
+.tablaEstadosEquipos td{
+    border: 1px solid #ddd;
+    padding: 8px;  
+    align-content: center;
+    text-align: center;
+}
+
+.formEstado{    
+    display: inline-block;
+    width: 300px;
+}
+
+
+
+
+
+
+.tablaInforme {
+    font-family: 'Nunito Sans',Trebuchet MS, Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    min-width: 100%;
+    min-height: 100%;
+    box-shadow: 1px 2px 4px 0 rgba(0, 0, 0, 0.08);
+    font-size: 16px;
+
+}
+
+.tablaInforme thead tr th {   
+    border: 1px solid #f2f2f2;
+    min-width: 100%; 
+    height: 20px;
+    width: auto;    
+
+    padding-left: 10px; 
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 30px;
+    text-align: center;
+    background-color: #333333;
+    color: #f2f2f2;
+}
+
+
+.tablaInforme thead tr .headerSortDown, table.tablaInforme thead tr .headerSortUp
+{
+    border: 1px solid #333333;
+    color: #00ff00;
+}
+
+
+
+
+.tablaInforme td{
+    padding: 1px; 
+    height: 0px;
+    width: auto;  
+    color: #666;
+}
+
+
+.tablaInforme tr:nth-child(even){
+    background-color: #f2f2f2;
+    height: 10px;  
+}
+
+
+.tablaInforme tr:hover {
+    background-color: #ddd;       
+}
+
+
+
+.tablaInformeEncabezados {
+    font-family: 'Nunito Sans',Trebuchet MS, Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    min-width: 100%;
+    min-height: 100%;
+
+
+}
+
+.tablaInformeEncabezados thead tr th {   
+    min-width: 100%; 
+    height: 20px;
+
+    padding-left: 10px; 
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 30px;
+    text-align: center;
+    color: black;
+    opacity: 0.90;
+
+}
+
+
+
+
+.tablaInformeEncabezados td{
+
+}
+
+
+
+.tDnD_whileDrag td {
+    font-size: 14px;
+    font-family: cursive;
+    font-style: oblique;
+    background-color: #eee;
+    -webkit-box-shadow: 6px 3px 5px #555, 0 1px 0 #ccc inset, 0 -1px 0 #ccc inset;
+}
+
+.tDnD_whileDrag td:last-child {
+    -webkit-box-shadow: 1px 8px 6px -4px #555, 0 1px 0 #ccc inset, 0 -1px 0 #ccc inset;
+}
+
+.tDnD_whileDrag {
+    -webkit-box-shadow: 0 15px 10px -10px black, 0 1px 4px black, 0 0 10px darkgray inset;
+
+}
+
+
+.card-body .tabla{
+    
+    margin-top: 13px;
+    /*background-color: red;*/
+}
+
+
+.card-body .tabla thead tr th {   
+    border: 1px solid #ddd;
+    min-width: 100%; 
+    height: 0.15em;
+    width: auto;    
+    padding-left: 10px; 
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 30px;
+    text-align: center;
+    background-color: #333333;
+    color: white;
+    opacity: 0.90;
+}
+
+
+
+
+
+.card-body .tabla td{
+    font-family: 'Nunito Sans',Trebuchet MS, Arial, Helvetica, sans-serif;
+    border: 1px solid #ddd;
+    padding: 0.5em; 
+    height: 0.10em;
+    width: auto;  
+}
+
+
+.card-body .tabla tr:nth-child(even){
+    background-color: #f2f2f2;
+    height: 7px;  
+}
+
+.card-body .tabla tr:nth-child(odd){
+    background-color: rgba(255, 255, 255, 1);
+}

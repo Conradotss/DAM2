@@ -1,0 +1,553 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 03-may-2017, 16:33:26
+    Author     : Onelectric
+*/
+
+.form-basic  .divHome{
+    align-content: center;
+    text-align: center;
+    padding-top: 0px;
+    padding-bottom: 20px;
+    /*    background-color: #00ff00;    */
+}
+
+.form-basic  .botonesHome{
+    align-content: center;
+    text-align: center;
+    padding-top: 0px;
+    padding-bottom: 20px;
+    /*background-color: #00ff00;*/    
+}
+
+.form-basic  .botonesHome button{
+    background-repeat: no-repeat;
+    display: inline-block;    
+    outline: none;
+    cursor: pointer;
+    width: 96px;
+    height: 96px;
+    background-color: transparent;
+    border: none;
+    border-radius: 7px;   
+    transition-duration: 0.4s;      
+    border: none;
+    /*margenes alrededor de los botones*/
+    margin: 10px 20px 10px 20px;    
+}
+
+
+.form-basic  .botonesHome button:hover{    
+    box-shadow: 0 4px 8px 0px rgba(0,0,0,0.24),0 2px 4px 0px rgba(0,0,0,0.19);	
+    transform:scale(1.2);	
+    transition-duration: 0.4s;	
+    border-radius: 18px;	
+}
+
+
+.form-basic  .botonesHome button:active{
+    transform:scale(0.7);	
+    transition-duration: 0.2s;	
+    border-radius: 20px;
+}
+
+.form-basic  .botonesHome button:disabled{   
+    opacity: 0.3;
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+    filter: grayscale(100%); 
+}
+
+.form-basic  .botonesHome .contButton{
+    /*background-color: #00ff00;*/
+    display: inline-table !important;
+    text-align: center;    
+    width: auto;
+    height: auto;
+    margin-bottom: 40px;
+}
+
+.form-basic  .botonesHome .labelBoton{
+    /*background-color: #003eff;*/
+    text-align: center;
+    align-content: center;
+    color: #5F5F5F;
+    display: inline;
+}
+
+/************************************Home*******************************************/
+
+.btnConfiguracion{    
+    background-image: url(../images/96x96/configuracion.png);  
+}
+.btnAlertas{    
+    background-image: url(../images/96x96/alertas.png);  
+}
+.btnAlertasPersonalizables{    
+    background-image: url(../images/96x96/alertasPersonalizables.png);  
+}
+.btnControl{
+    background-image: url(../images/96x96/control.png);  
+}
+.btnControlGeneralMain{
+    background-image: url(../images/96x96/controlGeneralMain.png);  
+}
+
+
+.btnGrupoVarControlElectricidad{
+    background-image: url(../images/96x96/electricidad.png);  
+}
+.btnCesta{
+    background-image: url(../images/96x96/cesta.png);  
+}
+.btnPedido{
+    background-image: url(../images/96x96/pedidos.png);  
+}
+.btnRecepcionGeneral{
+    background-image: url(../images/96x96/recepciongeneral.png);  
+}
+.btnCompras{
+    background-image: url(../images/96x96/compras.png);  
+}
+
+
+.btnVentas{
+    background-image: url(../images/96x96/ventas.png);  
+}
+
+
+.btnExistencias{
+    background-image: url(../images/96x96/existencias.png);  
+}
+
+
+.btnContabilidad{
+    background-image: url(../images/96x96/administracion.png);  
+}
+
+
+
+.btnMantenimiento{
+    background-image: url(../images/96x96/mantenimiento.png);  
+}
+
+
+.btnConexion{
+    background-image: url(../images/96x96/conexion.png);  
+}
+
+
+.btnLog{
+    background-image: url(../images/96x96/log.png);  
+}
+
+.btnComunicacion{
+    background-image: url(../images/96x96/comunicacion.png);  
+}
+
+.btnMaquinaria{
+    background-image: url(../images/96x96/maquina.png);  
+}
+.btnMaquinariaHome{
+    background-image: url(../images/96x96/maquinaria.png);  
+}
+
+.btnAsociarMaquina{
+    background-image: url(../images/96x96/asociarmaquinas.png);  
+}
+.btnFamiliaMaquina{
+    background-image: url(../images/96x96/familiamaquinas.png);  
+}
+
+.btnConfiguracionUsuario{
+    background-image: url(../images/96x96/confiUsuario.png);  
+}
+
+
+/************************************Home*******************************************/
+
+/************************************Configuracion*******************************************/
+
+.btnEmpresa{
+    background-image: url(../images/96x96/empresa.png);  
+}
+.btnDocumento{
+    background-image: url(../images/96x96/documento.png);  
+}
+.btnCopiaSeguridad{
+    background-image: url(../images/96x96/copiaSeguridad.png);  
+}
+.btnProgramarCopiaSeguridad{
+    background-image: url(../images/96x96/programarcopiasseguridad.png);  
+}
+.btnPermisos{
+    background-image: url(../images/96x96/permisos.png);  
+}
+.btnIva{
+    background-image: url(../images/96x96/iva.png);  
+}
+.btnZona{
+    background-image: url(../images/96x96/zonas.png);  
+}
+.btnPropieadades{
+    background-image: url(../images/96x96/propiedades.png);  
+}
+.btnTareas{
+    background-image: url(../images/96x96/tareas.png);  
+}
+
+.btnDiaFestivo{
+    background-image: url(../images/96x96/diaFestivo.png);  
+}
+.btnUsuario{
+    background-image: url(../images/96x96/usuario.png);  
+}
+
+.btnGrupoUsuario{
+    background-image: url(../images/96x96/grupoUsuario.png);  
+}
+
+.btnTurno{
+    background-image: url(../images/96x96/turnos.png);  
+}
+
+.btnCliente{
+    background-image: url(../images/96x96/clientes.png);  
+}
+
+.btnTarifaCliente{
+    background-image: url(../images/96x96/tarifas.png);  
+}
+
+.btnEquipo{
+    background-image: url(../images/96x96/equipos.png);  
+}
+
+.btnComSerial{
+    background-image: url(../images/96x96/comserial.png);  
+}
+
+.btnComBaseDatos{
+    background-image: url(../images/96x96/combasesdatos.png);  
+}
+
+.btnVariable{
+    background-image: url(../images/96x96/variable.png);  
+}
+
+.btnVariablesGrupo{
+    background-image: url(../images/96x96/variablesgrupo.png);  
+}
+
+.btnProduccion{
+    background-image: url(../images/96x96/produccion.png);  
+}
+
+.btnAlbaranes{
+    background-image: url(../images/96x96/registros.png);  
+}
+
+.btnFacturas{
+    background-image: url(../images/96x96/factura.png);  
+}
+.btnFacturaProforma{
+    background-image: url(../images/96x96/proforma.png);  
+}
+.btnFacturaRectificativa{
+    background-image: url(../images/96x96/rectificativa.png);  
+}
+.btnAlbaranRectificativo{
+    background-image: url(../images/96x96/rectificativos.png);  
+}
+.btnLineaTrabajo{
+    background-image: url(../images/96x96/lineaTrabajo.png);  
+}
+.btnAsociarMaquinaria{
+    background-image: url(../images/96x96/asociarmaquinas.png);  
+}
+.btnAsociarFamilia{
+    background-image: url(../images/96x96/asociarfamilia.png);  
+}
+
+.btnGrupoRegistro{
+    background-image: url(../images/96x96/gruposregistro.png);  
+}
+.btnLotes{
+    background-image: url(../images/96x96/lotes.png);  
+}
+
+.btnGrupoEscritura{
+    background-image: url(../images/96x96/escritura.png);  
+}
+
+.btnGrupoVarOTs{
+    background-image: url(../images/96x96/grupoVarOTs.png);  
+}
+
+/************************************Configuracion*******************************************/
+
+/************************************Mantenimiento*******************************************/
+
+.btnMantActuacion{
+    background-image: url(../images/96x96/actuacion.png);  
+}
+.btnMantActuacionTiempoReal{
+    background-image: url(../images/96x96/actuaciontiemporeal.png);  
+}
+
+.btnMantOrdenTrabajo{
+    background-image: url(../images/96x96/OTs.png);  
+}
+.btnMantIncidencia{
+    background-image: url(../images/96x96/incidencia.png);  
+}
+
+.btnMantPlano{
+    background-image: url(../images/96x96/supervision.png);  
+}
+
+.btnMantEdicionPlanos{
+    background-image: url(../images/96x96/edicionPlanos.png);  
+}
+
+.btnMantUsuario{
+    background-image: url(../images/96x96/respLinea.png);  
+}
+
+.btnMantUsuarioOT{
+    background-image: url(../images/96x96/permisoUsuarioOT.png);  
+}
+
+.btnControlUsuario{
+    background-image: url(../images/96x96/controlUsuario.png);  
+}
+.btnGastos{
+    background-image: url(../images/96x96/gastos.png);  
+}
+.btnPreventivo{
+    background-image: url(../images/96x96/preventivo.png);  
+}
+.btnRegistroHorario{
+    background-image: url(../images/96x96/registrohorario.png);  
+}
+.btnParteDiario{
+    background-image: url(../images/96x96/parteDiario.png);  
+}
+
+.btnControlEmpresa{
+    background-image: url(../images/96x96/controlEmpresa.png);  
+}
+.btnControlVacaciones{
+    background-image: url(../images/96x96/vacaciones.png);  
+}
+.btnControlBajas{
+    background-image: url(../images/96x96/baja.png);  
+}
+.btnControlGeneral{
+    background-image: url(../images/96x96/controlGeneral.png);  
+}
+
+
+
+/************************************Mantenimiento*******************************************/
+
+/************************************Calidad*******************************************/
+.btnRegistros{
+    background-image: url(../images/96x96/registros.png);  
+}
+/************************************Calidad*******************************************/
+
+
+/************************************Producción*******************************************/
+.btnGraficaLineas{
+    background-image: url(../images/96x96/ventasLineas.png);  
+}
+.btnGraficaMesBarras{
+    background-image: url(../images/96x96/ventasMes.png);  
+}
+.btnGraficaRendimientosQuesito{
+    background-image: url(../images/96x96/rendimientos.png);  
+}
+.btnControlEmpresaVenta{
+    background-image: url(../images/96x96/controlEmpresaVentas.png);  
+}
+.btnNominas{
+    background-image: url(../images/96x96/nominas.png);  
+}
+.btnIrpf{
+    background-image: url(../images/96x96/IRPF.png);  
+}
+.btnRlc{
+    background-image: url(../images/96x96/RLC.png);  
+}
+.btnIva{
+    background-image: url(../images/96x96/iva.png);  
+}
+.btnRetencion{
+    background-image: url(../images/96x96/retencion.png);  
+}
+.btnSubvencion{
+    background-image: url(../images/96x96/subvencion.png);  
+}
+.btnPlaning{
+    background-image: url(../images/96x96/planing.png);  
+}
+.btnCrearDocumentoVentas{
+    background-image: url(../images/96x96/creardocumentoventas.png);  
+}
+
+.btnGrupoRespLineas{
+    background-image: url(../images/96x96/grupoRespLineas.png);  
+}
+
+.btnCopiarDatos{
+    background-image: url(../images/96x96/copiarDatos.png);  
+}
+.btnMoverDatos{
+    background-image: url(../images/96x96/moverDatos.png);  
+}
+
+
+.btnRutaOTs{
+    background-image: url(../images/96x96/ruta.png);  
+}
+
+.btnOTs{
+    background-image: url(../images/96x96/OTs.png);  
+}
+
+.btnProveedor{
+    background-image: url(../images/96x96/proveedor.png);  
+}
+
+.btnPresupuestos{
+    background-image: url(../images/96x96/presupuestos.png);  
+}
+
+.btnProyectos{
+    background-image: url(../images/96x96/proyectos.png);  
+}
+
+.btnActuacion{
+    background-image: url(../images/96x96/actuacion.png);  
+}
+
+.ongestion{
+    background-image: url(../images/96x96/ruta.png);  
+}
+
+.btnDevolucionArticulos{
+    background-image: url(../images/96x96/devolucionArticulos.png);  
+}
+.btnSalidaArticulos{
+    background-image: url(../images/96x96/salidaarticulos.png);  
+}
+
+.btnHistoricoDevolucion{
+    background-image: url(../images/96x96/historicoDevolucion.png);  
+}
+.btnFamProducto{
+    background-image: url(../images/96x96/famProductos.png);  
+}
+.btnFamArticulo{
+    background-image: url(../images/96x96/famArticulo.png);  
+}
+
+.btnArticulo{
+    background-image: url(../images/96x96/articulo.png);  
+}
+
+.btnProducto{
+    background-image: url(../images/96x96/producto.png);  
+}
+.btnAlmacen{
+    background-image: url(../images/96x96/almacen2.png);  
+}
+.btnGrupoArticulos{
+    background-image: url(../images/96x96/grupoArticulos.png);  
+}
+
+.btnMarcas{
+    background-image: url(../images/96x96/marcas.png);  
+}
+.btnConservacion{
+    background-image: url(../images/96x96/conservacion.png);  
+}
+
+.btnEnvase{
+    background-image: url(../images/96x96/envase.png);  
+}
+
+.btnRespOT{
+    background-image: url(../images/96x96/respOTs.png);  
+}
+
+.btnLinea{
+    background-image: url(../images/96x96/respLinea.png);  
+}
+
+.btnVerificar{
+    background-image: url(../images/96x96/calidad.png);  
+}
+
+
+/************************************Producción*******************************************/
+
+/************************************Conexiones y estados*******************************************/
+.btnConexEquipos{
+    background-image: url(../images/96x96/conexiones.png);  
+}
+
+.btnSesionUsuario{
+    background-image: url(../images/96x96/sesionUsuario.png);  
+}
+
+.btnConexionesSesionUsuario{
+    background-image: url(../images/96x96/conexionesUsuarios.png);  
+}
+/************************************Conexiones y estados*******************************************/
+
+
+/************************************GMAO*******************************************/
+.btnGMAO{
+    background-image: url(../images/96x96/gmao.png);  
+}
+/************************************GMAO*******************************************/
+
+
+.btnPeriodos{
+    background-image: url(../images/96x96/periodos.png);  
+}
+.btnTarifas{
+    background-image: url(../images/96x96/tarifa.png);  
+}
+.btnCostes{
+    background-image: url(../images/96x96/costes.png);  
+}
+
+@keyframes taadaa { 
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+  
+}
+@keyframes taadaa2 { 
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+  
+}

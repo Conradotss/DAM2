@@ -1,0 +1,19 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 18-feb-2018, 22:38:32
+    Author     : OnAngel
+*/
+
+.barcode-container {
+    height: 200px;
+    line-height: 200px;
+    text-align: center;
+    vertical-align: middle;
+    margin-left: 25px;
+    margin-right: 25px;
+    cursor: pointer;    
+}

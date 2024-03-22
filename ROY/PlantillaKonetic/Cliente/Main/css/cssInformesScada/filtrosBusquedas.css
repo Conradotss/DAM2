@@ -1,0 +1,330 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 27-nov-2016, 13:39:45
+    Author     : Angel
+*/
+
+/*variables globales*/
+:root{
+    -anchuraform: 100%;    
+    -alturaCampo: 10px;
+};
+
+
+
+
+.formbusqueda{
+    width: var(-anchuraform);
+    min-width: 100%;    
+    min-height: 100%;
+    height: auto;
+    margin: 0 auto;
+    /*    padding-top: 50px;
+        padding-bottom: 50px;*/
+    box-sizing: border-box;
+
+
+    background-color:  white;
+    box-shadow: 1px 2px 8px 0px rgba(255,255,255,1);
+    /*background: linear-gradient(to bottom right, white, #f7fff7);*/
+
+    font: bold 14px sans-serif;
+    /*text-align: left;*/    
+    overflow: auto;
+    /*Para dejar un poco de espacio entre el buscador y la tabla*/
+    padding-bottom: 25px;
+}
+
+.formbusqueda #tablaBusqueda{
+    width: var(-anchuraform);
+    min-width: 100%;     
+    height: auto;
+
+    /*background-color: #00ff00;*/
+    /*    border-collapse: separate;
+        border: #000000 double;*/
+}
+
+.formbusqueda #tablaBusqueda th, .formbusqueda #tablaBusqueda td{
+    /*width: var(--anchuraform);*/    
+    /*background-color: #00ff00;*/
+    /*    border-collapse: separate;
+        border: #000000 double;*/
+    /*width: auto;*/
+    height: auto;
+    min-width: 100%; 
+
+}
+
+.formbusqueda .formfila{
+    /*text-align: left;*/
+    margin-bottom: 10px; 
+    /*margin-left: 20px;*/
+    height: auto;
+    width: 450px;
+    /*Color fondo*/
+    /*background-color: #00ff00;*/
+
+}
+
+.formfila{    
+    display: inline-block;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    /*background-color: #00ff00;*/
+
+    /*padding-left: 50px;*/   
+}
+
+.formbusqueda span{
+    width: 145px;
+
+}
+
+/*Etiquetas formularios*/
+.formbusqueda .formfila > label span{
+    display: inline-block;
+    box-sizing: border-box;
+    color: #5F5F5F;
+
+    text-align: right;
+    vertical-align: top;
+    padding: 8px 0 0 5px;
+
+}
+
+.formbusqueda .formfila .labelFormulario{
+    display: inline-block;
+    color:  #5f5f5f;
+    box-sizing: border-box;
+    /*    min-width: 500px;*/
+    box-shadow: 1px 2px 4px 0 rgba(0, 0, 0, 0.08);
+    padding: 8px;
+    border: 1px solid #dbdbdb;
+    outline-color: #00ff00;/*foco*/
+    background-color: #ebebe4;
+    border-radius: 5px;
+    font-weight: bold;
+    /*overflow: auto;*/
+
+    /*opacity: 0.3;*/
+
+}
+
+.formbusqueda input{
+    display: inline-block;
+    color:  #5f5f5f;
+    box-sizing: border-box;
+    width: 500px;
+    box-shadow: 1px 2px 4px 0 rgba(0, 0, 0, 0.08);
+    /*padding: var(--alturaCampo);*/ 
+    border: 1px solid #dbdbdb;
+    outline-color: #00ff00;/*foco*/
+    /*overflow: auto;*/
+    /*padding: 12px 8px;*/
+    border-radius: 5px;
+    /*height: 38px;*/
+
+
+}
+
+.formbusqueda input[type=week], input[type=datetime-local], input[type=datetime]{
+    height: 38px;
+}
+
+.formbusqueda input[type=radio],
+.formbusqueda input[type=checkbox]{
+    box-shadow: none;
+    width: 500px;
+    outline-color: #00ff00;/*foco*/
+    border-radius: 5px;
+    width: auto;
+
+}
+
+.formbusqueda input[type=checkbox]{
+    margin-top: 10px;
+    outline-color: #00ff00;/*foco*/
+    border-radius: 5px;
+
+}
+
+.formbusqueda select{
+    background-color: #ffffff;
+    color:  #5f5f5f;
+    box-sizing: border-box;
+    /*max-width: 500px;*/
+    width: auto;
+    box-shadow: 1px 2px 4px 0 rgba(0, 0, 0, 0.08);
+    padding: var(-alturaCampo);
+    border: 1px solid #dbdbdb;
+    outline-color: #00ff00; /*foco*/
+    border-radius: 5px;
+
+}
+
+.formbusqueda select:expanded{
+    outline-color: #00ff00; /*foco*/
+}
+
+
+.formbusqueda textarea{
+    color:  #5f5f5f;
+    box-sizing: border-box;
+    width: 500px;
+    height: 80px;
+    box-shadow: 1px 2px 4px 0 rgba(0, 0, 0, 0.08);
+    font: normal 13px sans-serif;
+    padding: var(-alturaCampo); 
+    border: 1px solid #dbdbdb;
+    resize: vertical;
+    outline-color: #00ff00;/*foco*/
+    border-radius: 5px;
+}
+
+.formbusqueda .form-radio-buttons{
+    display: inline-block;
+    vertical-align: top;
+}
+
+.formbusqueda .form-radio-buttons > div{
+    margin-top: 10px;
+}
+
+.formbusqueda .form-radio-buttons label span{
+    margin-left: 8px;
+    color: #5f5f5f;
+    font-weight: normal;
+}
+
+.formbusqueda .form-radio-buttons input{
+    width: auto;
+}
+
+
+/*//////////////Estilo validacion formulario*/
+.formbusqueda label.error{
+    font-size: 0.8em;
+    background-color: red;
+    border-radius: 2px;
+    color: white;
+    font-weight: bold;
+    display: block;
+    margin: 5px 150px;
+    padding: 5px;
+
+}
+
+
+.formbotonesbuscar{
+    text-align: right;
+    display: inline-block;
+
+    /*background-color: #00ff00;*/
+}
+
+.buttonBuscar, .buttonLimpiar, .buttonCrear, .buttonActualizar, .buttonAsociar{     
+
+    display: inline-block;
+    outline: none;
+    cursor: pointer;
+    width: 32px;
+    height: 32px;
+    background: transparent;
+    border: none;
+    border-radius: 5px;		
+    background-repeat: no-repeat;  
+    transition-duration: 0.4s;      
+    border: none;
+    margin-right: 5px;
+
+}
+
+.buttonBuscar:hover, .buttonLimpiar:hover, .buttonCrear:hover, .buttonActualizar:hover, .buttonAsociar:hover{    
+    box-shadow: 0 2px 4px 0px rgba(0,0,0,0.24),0 1px 2px 0px rgba(0,0,0,0.19);	
+    transform:scale(1.2);	
+    transition-duration: 0.4s;	
+}
+
+.buttonBuscar:active, .buttonLimpiar:active, .buttonCrear:active, .buttonActualizar:active, .buttonAsociar:active{
+    transform:scale(0.7);	
+    transition-duration: 0.2s;	    
+}
+
+.buttonBuscar:disabled, .buttonLimpiar:disabled, .buttonCrear:disabled, .buttonActualizar:disabled, .buttonAsociar:disabled{
+    transform:scale(1);	
+    transition-duration: 0.2s;
+    opacity: 0.2;
+    /*cursor:default;*/  
+    pointer-events: none;    
+}
+
+.buttonBuscar{
+    background-image: url(../images/32x32/buscar.png);  
+}
+
+.buttonLimpiar{
+    background-image: url(../images/32x32/limpiar.png); 
+}
+
+.buttonCrear{
+    background-image: url(../images/32x32/nuevo.png);  
+}
+
+.buttonAsociar{
+    background-image: url(../images/32x32/asociar.png);  
+}
+
+.buttonActualizar{
+    background-image: url(../images/32x32/actualizar.png);  
+}
+
+
+/*	Making the form responsive. Remove this media query
+if you don't need the form to work on mobile devices. */
+
+/*@media (max-width: 1000px) {
+
+.form-basic{
+padding: 30px;
+max-width: 900px;
+}
+
+.form-basic .form-row{
+max-width: 500px;
+margin: 25px auto;
+text-align: left;
+}
+
+.form-basic .form-title-row{
+margin-bottom: 20px;
+}
+
+.form-basic .form-row > label span{
+display: block;
+text-align: left;
+padding: 0 0 15px;
+}
+
+.form-basic select{
+width: 240px;
+}
+
+.form-basic input[type=checkbox]{
+margin-top:0;
+}
+
+.form-basic .form-radio-buttons > div{
+margin: 0 0 10px;
+}
+
+.form-basic button{
+margin: 0;
+}
+
+}*/
