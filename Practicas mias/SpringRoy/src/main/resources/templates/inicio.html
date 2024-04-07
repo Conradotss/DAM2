@@ -1,0 +1,32 @@
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Inicio</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" th:href="@{/css/styles.css}" />
+    </head>
+    <body>
+        <h1>Bienvenido al inicio</h1>
+        <div> <a th:href="@{/agregar}">Crea una nueva persona</a>
+        <table border="1">
+            <tr>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Correo</th>
+                <th>Telefono</th>
+                <th>Editar</th>
+                <th>Eliminar</th>
+            </tr>
+            <tr th:each="persona : ${personas}"> 
+                <td th:text="${persona.nombre}"></td>
+                <td th:text="${persona.apellido}"></td>
+                <td th:text="${persona.correo}"></td>
+                <td th:text="${persona.telefono}"></td>
+                <td ><a th:href="@{/modificar/} + ${persona.idPersona}">Pulsa Aqui</a></td>
+                <td ><a th:href="@{/eliminar/} + ${persona.idPersona}">Pulsa Aqui</a></td>
+            </tr>
+            
+        </table>
+            </div>
+    </body>
+</html>

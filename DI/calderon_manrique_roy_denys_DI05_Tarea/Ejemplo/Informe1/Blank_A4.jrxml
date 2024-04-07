@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 9.0.0.final using JasperReports Library version 6.21.0-4f56c4f36cd19e17675219a9ac4692d5f0f13b06  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Blank_A4" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" isSummaryWithPageHeaderAndFooter="true" uuid="9c14776b-8f0b-4030-b0c8-8331de20b0c9">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Sample DB"/>
+	<subDataset name="grafico" uuid="c725ed92-7ce5-4c33-b3b6-662594baf580">
+		<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Sample DB"/>
+		<queryString language="SQL">
+			<![CDATA[SELECT CITY, COUNT(ID) AS TOTAL FROM ADDRESS GROUP BY CITY 
+ORDER BY CITY]]>
+		</queryString>
+		<field name="CITY" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.name" value="CITY"/>
+			<property name="com.jaspersoft.studio.field.label" value="CITY"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="ADDRESS"/>
+		</field>
+		<field name="TOTAL" class="java.lang.Long">
+			<property name="com.jaspersoft.studio.field.name" value="TOTAL"/>
+			<property name="com.jaspersoft.studio.field.label" value="TOTAL"/>
+		</field>
+		<group name="CITY">
+			<groupExpression><![CDATA[$F{CITY}]]></groupExpression>
+		</group>
+		<group name="TOTAL">
+			<groupExpression><![CDATA[$F{TOTAL}]]></groupExpression>
+		</group>
+	</subDataset>
+	<queryString language="SQL">
+		<![CDATA[SELECT * FROM ADDRESS ORDER BY CITY]]>
+	</queryString>
+	<field name="ID" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="ID"/>
+		<property name="com.jaspersoft.studio.field.label" value="ID"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="ADDRESS"/>
+	</field>
+	<field name="FIRSTNAME" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="FIRSTNAME"/>
+		<property name="com.jaspersoft.studio.field.label" value="FIRSTNAME"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="ADDRESS"/>
+	</field>
+	<field name="LASTNAME" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="LASTNAME"/>
+		<property name="com.jaspersoft.studio.field.label" value="LASTNAME"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="ADDRESS"/>
+	</field>
+	<field name="STREET" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="STREET"/>
+		<property name="com.jaspersoft.studio.field.label" value="STREET"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="ADDRESS"/>
+	</field>
+	<field name="CITY" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="CITY"/>
+		<property name="com.jaspersoft.studio.field.label" value="CITY"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="ADDRESS"/>
+	</field>
+	<variable name="NLineas" class="java.lang.Integer">
+		<variableExpression><![CDATA[$V{REPORT_COUNT}]]></variableExpression>
+		<initialValueExpression><![CDATA[0]]></initialValueExpression>
+	</variable>
+	<variable name="total" class="java.lang.Integer" calculation="DistinctCount">
+		<variableDescription><![CDATA[suma todos campos]]></variableDescription>
+		<variableExpression><![CDATA[$F{ID}]]></variableExpression>
+		<initialValueExpression><![CDATA[0]]></initialValueExpression>
+	</variable>
+	<variable name="CITY1" class="java.lang.Integer" resetType="Page" calculation="Count">
+		<variableExpression><![CDATA[$F{CITY}]]></variableExpression>
+	</variable>
+	<variable name="CITY2" class="java.lang.Integer" resetType="Group" resetGroup="Ciudad" calculation="Count">
+		<variableExpression><![CDATA[$F{CITY}]]></variableExpression>
+	</variable>
+	<variable name="ID1" class="java.lang.Integer" calculation="Average">
+		<variableExpression><![CDATA[$F{ID}]]></variableExpression>
+	</variable>
+	<variable name="mediaClientes" class="java.lang.Integer" resetType="Group" resetGroup="Ciudad" incrementType="Group" incrementGroup="Ciudad" calculation="Average">
+		<variableExpression><![CDATA[$F{ID}]]></variableExpression>
+		<initialValueExpression><![CDATA[0]]></initialValueExpression>
+	</variable>
+	<group name="Ciudad" isStartNewPage="true">
+		<groupExpression><![CDATA[$F{CITY}]]></groupExpression>
+		<groupHeader>
+			<band height="34">
+				<textField>
+					<reportElement mode="Opaque" x="70" y="2" width="100" height="30" forecolor="#FCFAFA" backcolor="#3B40D4" uuid="b4146135-0d6c-40fa-aa29-4a2801917beb"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="18"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{CITY}]]></textFieldExpression>
+				</textField>
+				<line>
+					<reportElement x="51" y="0" width="1" height="30" uuid="4a51270e-7af1-42f6-bd34-a83543710930"/>
+				</line>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band height="33">
+				<textField>
+					<reportElement mode="Opaque" x="240" y="0" width="100" height="30" forecolor="#FFFFFF" backcolor="#ED2121" uuid="febff81b-d186-4ada-9217-0161bfdbef13"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="12"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{CITY2}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement mode="Opaque" x="120" y="0" width="100" height="30" forecolor="#FFFFFF" backcolor="#F01E1A" uuid="74edb6f5-7ce9-4d7e-a60a-699509bb794d"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="12"/>
+					</textElement>
+					<text><![CDATA[Total por ciudad:]]></text>
+				</staticText>
+			</band>
+		</groupFooter>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="52" splitType="Stretch">
+			<staticText>
+				<reportElement x="167" y="-10" width="220" height="59" backcolor="#2C50C7" uuid="63c38806-52bc-4f87-9e12-f7745b0fdef9"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="26" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CLIENTES]]></text>
+			</staticText>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="52" splitType="Stretch">
+			<staticText>
+				<reportElement x="70" y="0" width="100" height="30" uuid="262d5721-e7d0-4349-8763-eb76671bf0e6">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="846efa14-d7c8-4e7c-9145-0ea75fffd7e6"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[NOMBRE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="320" y="0" width="100" height="30" uuid="98a68019-8aea-4ff0-8165-c6109c67d319">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="390da312-0843-4a6a-a519-d756c492c001"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[DIRECCION]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="200" y="0" width="100" height="30" uuid="06dbbbac-bccd-4eb5-a28d-c3138749a90f">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="390da312-0843-4a6a-a519-d756c492c001"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[APELLIDO]]></text>
+			</staticText>
+			<line>
+				<reportElement x="-3" y="39" width="560" height="1" uuid="b67017b7-e784-4b7b-97c5-f9650bfc1694"/>
+			</line>
+			<textField pattern="MMMMM dd, yyyy">
+				<reportElement x="460" y="0" width="100" height="30" uuid="b4f5987d-2f0f-4f16-9c7e-20d33cc34e86"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="33" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<textField>
+				<reportElement x="80" y="0" width="100" height="30" uuid="6134e669-66cb-46c3-b5ad-fdd3a497a614">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="846efa14-d7c8-4e7c-9145-0ea75fffd7e6"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{FIRSTNAME}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="320" y="3" width="145" height="30" uuid="c5bcefda-c777-4459-a958-ff43b3bea20e">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="390da312-0843-4a6a-a519-d756c492c001"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{STREET}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="50" y="1" width="1" height="29" uuid="8eaefad1-cc9b-4ad6-8788-a1f1c7f0ee6f"/>
+			</line>
+			<textField>
+				<reportElement x="200" y="3" width="100" height="30" uuid="ff5a78a2-7902-41b4-b992-28f882376297"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{LASTNAME}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="32" splitType="Stretch">
+			<textField>
+				<reportElement x="390" y="0" width="100" height="30" uuid="a501a5ed-d342-4145-b703-a99ce348b8ee"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$V{total}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="320" y="0" width="100" height="30" uuid="4e7c3770-7ea5-4856-8a38-b374ec69b5bf"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[TOTAL CLIENTES]]></text>
+			</staticText>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="33" splitType="Stretch">
+			<textField>
+				<reportElement x="230" y="0" width="100" height="30" uuid="19036e2a-0cc5-4ee4-a533-2bfc95ac1762"/>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="802" splitType="Stretch">
+			<staticText>
+				<reportElement x="134" y="50" width="293" height="30" uuid="9d1c505b-db08-4d75-9cc3-8d428c292953"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[GRAFICO CLIENTES]]></text>
+			</staticText>
+			<pieChart>
+				<chart evaluationTime="Report">
+					<reportElement x="-1" y="160" width="557" height="140" uuid="9d354534-8bab-4f82-bb57-c991a34a5931"/>
+					<chartTitle/>
+					<chartSubtitle/>
+					<chartLegend/>
+				</chart>
+				<pieDataset>
+					<dataset>
+						<datasetRun subDataset="grafico" uuid="21918dce-58bf-47ab-ae26-84d06f106fd6"/>
+					</dataset>
+					<keyExpression><![CDATA[$F{CITY}]]></keyExpression>
+					<valueExpression><![CDATA[$F{TOTAL}]]></valueExpression>
+				</pieDataset>
+				<piePlot>
+					<plot/>
+					<itemLabel/>
+				</piePlot>
+			</pieChart>
+			<bar3DChart>
+				<chart evaluationTime="Report">
+					<reportElement x="180" y="390" width="200" height="200" uuid="d80eb0d7-8fa6-4dca-bdc4-c55cd254a1fd"/>
+					<chartTitle/>
+					<chartSubtitle/>
+					<chartLegend/>
+				</chart>
+				<categoryDataset>
+					<dataset>
+						<datasetRun subDataset="grafico" uuid="3b9bf68b-7c38-4c54-9b52-83e1bff69fd8"/>
+					</dataset>
+					<categorySeries>
+						<seriesExpression><![CDATA[$F{CITY}]]></seriesExpression>
+						<categoryExpression><![CDATA[0]]></categoryExpression>
+						<valueExpression><![CDATA[$F{TOTAL}]]></valueExpression>
+					</categorySeries>
+				</categoryDataset>
+				<bar3DPlot>
+					<plot/>
+					<itemLabel/>
+					<categoryAxisFormat>
+						<axisFormat labelColor="#000000" tickLabelColor="#000000" axisLineColor="#000000"/>
+					</categoryAxisFormat>
+					<valueAxisFormat>
+						<axisFormat labelColor="#000000" tickLabelColor="#000000" axisLineColor="#000000"/>
+					</valueAxisFormat>
+				</bar3DPlot>
+			</bar3DChart>
+		</band>
+	</summary>
+</jasperReport>

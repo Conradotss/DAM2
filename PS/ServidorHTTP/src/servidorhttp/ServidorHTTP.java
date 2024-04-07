@@ -96,7 +96,7 @@ public class ServidorHTTP {
         return sdf.format(new Date());
     }
     
-    public static class HiloDespachador{
+    public static class HiloDespachador {
         
         private Socket cliente;
         private String peticion;
@@ -142,6 +142,8 @@ public class ServidorHTTP {
         }
             
         }
+
+        
     }
     
     

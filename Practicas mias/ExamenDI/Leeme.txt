@@ -1,0 +1,14 @@
+Explicacion Proyecto DI (Exámen)
+
+PRINCIPAL
+Ambos proyectos estan creado sobre un JFrame, en el principal he usado la herramienta split pane para separar un poco la aplicacion,
+una parte visual con una imagen y la otra con la parte de ejecucion de la reserva, el JFrame esta establecido como Box layout debido a que cambiará notablemente su contenido al terminar la ejecucion en el frame de reserva y al mostrar el contenido del mensaje este no se vería 
+completo
+
+
+RESERVA
+Este frame esta establecido como viene por default como Border Layout ya que si bien si cambia su contenido este ya esta previsto que cambie
+utiliza los campos textArea para coger la informacion del nombre y telefono de usuario, para el numero de personas que asisten y 
+la fecha me he decantado por un spinner cada uno configurado de acuerdo a sus necesidades(Uno que es tipo Integer el de numero de personas
+y el otro tipo Date para establecer la fecha en la que el usuario quiere reservar), para las opciones de EscapeRoom y VR he utilizado radio
+Button y he metido dentro de ellas a un grupo de esta manera si se selecciona una opcion la otra se deseleccionará, lo mismo para las opciones de Madrid, Paris, etc, estas viene por defecto ocultas con el setVisible en la condicion "False" y una vez seleccionadas o bien Escape Room o Realidad Virtual se mostraran cambiando el valor de estas y finalmente un boton el cual invoca un par de JOptionPane uno de confirmacion para confirmar la reserva y otro de mensaje para mostrar el nombre del usuario que ha reservado

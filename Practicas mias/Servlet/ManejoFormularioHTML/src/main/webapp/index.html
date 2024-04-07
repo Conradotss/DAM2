@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Formulario</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" type="text/css" href="resources/estilos.css">
+        <script>
+            function  validarForm(forma){
+    var usuario = forma.usuario;
+    if(usuario.value == "" || usuario.value == "Escribir usuario"){
+        alert("Debe proporcionar un nombre de usuario");
+        usuario.focus();
+        usuario.select();
+        return false;
+    }
+    
+    var password = forma.password;
+
+    if(password.value == "" || password.value.length < 3){
+        alert("Debe proporcionar un password al menos de 3 caracteres");
+        password.focus();
+        password.select();
+        return false;
+    }
+    
+    var tecnologias = forma.tecnologia;
+    var chechSeleccionado = false;
+    
+    for(var i = 0; i<tecnologias.length; i++){
+        if(tecnologias[i].checked){
+            chechSeleccionado=true;
+        }
+    }
+    
+    if(!chechSeleccionado){
+        alert("Debe seleccionar una tecnologia");
+        return false;
+    }
+    
+    var generos = forma.genero;
+    var radioSeleccionado = false;
+    
+    for (var i = 0; i < generos.length; i++) {
+        if(generos[i].checked){
+           radioSeleccionado = true; 
+        }
+    }
+    
+    if(!radioSeleccionado){
+        alert("Debe seleccionar un genero");
+        return false;
+    }
+    
+    var trabajo = forma.trabajo;
+    if(trabajo.value===""){
+        alert("Debes selccionar un trabajo");
+        return false;
+    }
+    
+    alert("Formulario valida , enviado datos al servidor");
+    return true;
+}
+
+
+        </script>
+    </head>
+    <body>
+        <form name="form1" action="/ManejoFormularioHTML/Servlet" method="post" 
+              onsubmit="return validarForm(this)">
+            <input type="hidden" name="oculto" value="valorOculto"/>
+            <table id="enfasis-columna">
+                <caption>Formulario Registro de datos</caption>
+                <tr>
+                    <td class="columna">Usuario: (*)</td>
+                    <td>
+                        <input class="default" type="text" name="usuario"
+                               value="Escribir usuario" onfocus="this.select(this)"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="columna">Password: (*)</td>
+                    <td>
+                        <input class="default" type="password" name="password"
+                               onfocus="this.select()"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="columna">Tecnologias de internet: (*)</td>
+                    <td>
+                        Java <input  type="checkbox" name="tecnologia" value="java"/>
+                        &nbsp;&nbsp;
+                        Phyton <input  type="checkbox" name="tecnologia" value="phyton"/>
+                        &nbsp;&nbsp;
+                        Go <input  type="checkbox" name="tecnologia" value="go"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="columna">Genero: (*)</td>
+                    <td>
+                        Hombre<input type="radio" name="genero" value="H"/>  
+                        &nbsp;&nbsp;
+                        Mujer<input type="radio" name="genero" value="M"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="columna">Trabajo: (*)</td>
+                    <td>
+                        <select name="trabajo" class="default">
+                            <option value="">Seleccionar</option>
+                            <option value="1">Profesor</option>
+                            <option value="2">Medico</option>
+                            <option value="3">Programador</option>
+                            <option value="4">Transportista</option>
+                        </select>
+                    </td>
+                </tr>
+                 <tr>   
+                    <td class="columna">Musica favorita: </td>
+                    <td>
+                        <select name="musica" class="default">
+                            <option value="">Seleccionar</option>
+                            <option value="tecno">Tecno</option>
+                            <option value="rock">Rock</option>
+                            <option value="cumbia">Cumbia</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="columna">Comentario: </td>
+                    <td>
+                        <textarea name="comentarios" cols="30" rows="2"
+                                  class="default" onfocus="this.select()">
+                            Escribir un texto
+                        </textarea>
+                    </td>
+                </tr>
+                <tr style="text-align: center">
+                    <td>
+                        <input type="reset" value="Limpiar" class="default"/>
+                    </td>
+                    <td>
+                        <input type="submit" value="Enviar" class="default"/>
+                    </td>
+                </tr>
+            </table>
+
+        </form>
+    </body>
+</html>
