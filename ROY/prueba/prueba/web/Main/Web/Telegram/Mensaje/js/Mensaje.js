@@ -1,0 +1,76 @@
+/* 
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+
+$(document).ready(function () {
+    //Capturamos la ruta para envio de datos a servlet
+    var pathArray = window.location.pathname.split('/');
+    var urlServlet = "/" + pathArray[1] + "/Mensaje";
+    //Validar el formulario
+    validarFormulario("#frmNuevoMensaje", urlServlet);
+
+    //boton de cancelar
+    $("#btnCancelarMensaje").click(function (e) {
+        ventanaAtras(window, swal);
+    });
+    
+
+});
+
+function validarFormulario(nombreForm, urlServlet) {
+
+    $(nombreForm).validate({
+
+        rules: {
+
+            nombre: {
+                required: true,
+                maxlength: 100
+            },
+            token: {
+                required: true,
+                maxlength: 100
+            },
+            usuario: {
+                required: true,
+                maxlength: 100
+            }
+
+        }, //////Fin de reglas///////////////////////////////////
+
+        messages: {
+
+            nombre: {
+                required: "Debe introducir un nombre."
+            },
+            token: {
+                required: "Debe elegir un bot."
+            },
+            usuario: {
+                required: "Debe elegir un usuario."
+            }
+
+        }, /////////Fin de msg////////////////////////////////
+
+        submitHandler: function () {
+            enviarDatosSubirArchivos(urlServlet, getDatosForm(), true);
+        }
+
+    });////////Fin Validate
+
+}
+
+
+
+
+
+
+function getDatosForm() {
+    //capturamos los datos de los campos del formulario    
+    var data = new FormData($("#frmNuevoMensaje")[0]);
+
+    return data;
+}

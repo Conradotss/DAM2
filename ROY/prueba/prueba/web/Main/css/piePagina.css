@@ -1,0 +1,66 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 22-nov-2016, 20:42:11
+    Author     : Angel
+*/
+
+
+
+/*==================boxes====================*/
+.address {
+    float: left;
+}
+.address dt {
+    margin-bottom: 1.5em;
+}
+.address dd {
+    clear: both;
+    text-align: right;
+}
+.address dd span {
+    float: left;
+    padding-right: 25px;
+}
+.address dd a {
+    color: #06cbe2;
+}
+
+
+/*===== footer =====*/
+footer{
+    
+}
+
+footer .container {
+    color: #fff;
+    font-size: 16px;
+    line-height: 1.2em;
+    padding: 16px 0 16px 0;
+    font-family: 'ColaborateThinRegular';
+    
+}
+footer .copy {    
+    /*float: left;*/
+    /*margin-left: 20px;*/
+    text-align: center;
+}
+footer .copy a {
+    color: #fff;
+    text-decoration: none;
+}
+footer .copy a:hover {
+    -moz-transition: all 0.3s ease-out; /* FF3.7+ */
+    -o-transition: all 0.3s ease-out; /* Opera 10.5 */
+    -webkit-transition: all 0.3s ease-out; /* Saf3.2+, Chrome */
+    color: #e83709;
+}
+
+footer .copy div{
+    display: inline-block;
+}
+
+

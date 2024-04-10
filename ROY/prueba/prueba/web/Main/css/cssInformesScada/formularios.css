@@ -1,0 +1,776 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 27-nov-2016, 13:39:45
+    Author     : Angel
+*/
+
+/*variables globales*/
+/*:root {
+    --max-width: 100%;      
+}*/
+
+
+.form-basic{
+    /*max-width: var(--max-width);*/ 
+    min-height: 80%;
+    width: auto;
+    min-height: 800px !important;
+    /*height: auto;*/
+    margin: 0 auto;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    /*background-color:  #ffffff;*/
+    /*box-shadow: 1px 2px 8px 0px rgba(255,255,255,1);*/
+    /*background: linear-gradient(to bottom right, white, #f7fff7);*/
+
+    font: bold 14px sans-serif;
+    /*text-align: left;*/    
+    overflow: auto;
+}
+
+
+.form-basic .divform{
+    background: transparent;  /* Fondo del contenido */
+    border-radius: 5px;
+    /*    border: 1px outset #dbdbdb;*/
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 20px;
+    padding-bottom: 10px;    
+    border: 1px solid #dbdbdb;
+    box-shadow: 2px 3px 6px 0 rgba(0, 0, 0, 0.08);
+    overflow: auto;
+    min-width: 99%; 
+    margin-bottom: 10px;   
+    /*width: auto;*/
+    /*background-color: #00ff00;*/
+    /*box-shadow: 1px 1px 2px 0px rgba(70, 70, 70, 1);*/
+}
+
+.form-basic .tituloDiv{
+    color: #fff;  
+    border-radius: 5px;
+    /*    border: 1px solid #dbdbdb;*/
+    display: block;
+    width: auto;
+    border-top: 1px solid #dbdbdb;
+    border-left: 1px solid #dbdbdb;
+    border-right: 1px solid #dbdbdb;
+    text-align: center;
+    background-color: #2b2b2b;  
+}
+
+.form-basic .form-row{
+    /*text-align: left;*/
+    margin-bottom: 10px; 
+    /*margin-left: 20px;*/
+    /*height: auto;*/
+    /*Color fondo*/
+    /*background-color: #00ff00;*/
+
+
+}
+
+.form-row{    
+    display: inline-block;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-bottom: 50px;
+
+    min-height: 100%;
+    /*padding-left: 50px;*/   
+}
+
+.form-row-add{
+    display: inline-block; 
+    margin-right: 35px;
+}
+
+span{
+    width: 145px;
+    /*background-color: #06cbe2;*/
+}
+
+.form-basic .form-title-row{
+    text-align: center;
+    margin-bottom: 20px;
+    overflow: auto;
+    display: block;
+    padding-bottom: 20px;
+}
+
+
+
+/* The form title */
+
+.form-basic h1{
+    display: inline-block;
+    box-sizing: border-box;
+    color:  #4c565e;
+    font-size: 24px;
+    padding: 0 10px 5px;
+    border-bottom: 2px solid #4c565e;/*Color de línea*/
+    margin: 0;
+}
+
+/*Titulos campos formularios*/
+.form-basic .form-row > label span{
+    display: inline-block;
+    box-sizing: border-box;
+    color: #5F5F5F;
+
+    text-align: right;
+    vertical-align: top;
+    padding: 12px 0 0 5px;
+}
+
+/*/////* Campos transparentes */
+.form-basic .form-row .campoTransparente{
+    min-width: 50px;    
+    width: auto;  
+    border: transparent;
+    background: transparent;
+    box-shadow: 0px 0px 0px 0px rgba(255,255,255,1);
+}
+
+.form-basic .form-row .labelFormulario{
+    display: inline-block;
+    color:  #5f5f5f;
+    box-sizing: border-box;
+    /*    min-width: 500px;*/
+    box-shadow: 1px 2px 4px 0 rgba(0, 0, 0, 0.08);
+    padding: 12px;
+    border: 1px solid #dbdbdb;
+    outline-color: #00ff00;/*foco*/
+    background-color: #ebebe4;
+    border-radius: 5px;
+    font-weight: bold;
+    /*opacity: 0.3;*/
+    /*overflow: auto;*/
+
+}
+
+.form-basic .form-row label label{
+    display: inline-block;
+    color:  #5f5f5f;
+    box-sizing: border-box;
+    min-width: 300px;
+    box-shadow: 1px 2px 4px 0 rgba(0, 0, 0, 0.08);
+    padding: 12px;
+    border: 1px solid #dbdbdb;
+    outline-color: #00ff00;/*foco*/
+    background-color: #ebebe4;
+    border-radius: 5px;
+    /*font-weight: bold;*/
+    /*opacity: 0.3;*/
+    /*overflow: auto;*/
+}
+
+.form-basic input[type=color]{
+    display: inline-block;
+    color:  #5f5f5f;
+    box-sizing: border-box;    
+    box-shadow: 1px 2px 4px 0 rgba(0, 0, 0, 0.08);
+    padding: 12px;
+    border: 1px solid #dbdbdb;
+    outline-color: #00ff00;/*foco*/
+    /*overflow: auto;*/
+    /*padding: 12px 8px;*/
+    border-radius: 5px;
+    font-family: inherit;
+    background-color: #ffffff;
+    text-align: left;
+    height: 43px;    
+    padding: 4px;
+}
+
+.form-basic input{
+    display: inline-block;
+    color:  #5f5f5f;
+    box-sizing: border-box;
+    width: 380px;
+    box-shadow: 1px 2px 4px 0 rgba(0, 0, 0, 0.08);
+    padding: 12px;
+    border: 1px solid #dbdbdb;
+    outline-color: #00ff00;/*foco*/
+    /*overflow: auto;*/
+    /*padding: 12px 8px;*/
+    border-radius: 5px;
+    font-family: inherit;
+    background-color: #ffffff;
+    text-align: left;
+}
+
+.form-basic .onoffswitch_checkbox{
+    opacity: 1;
+    
+}
+
+
+
+.form-basic input[type=radio],
+.form-basic input[type=checkbox],
+.form-basic input[type=time]
+{
+    box-shadow: none;
+    width: 380px;
+    outline-color: #00ff00;/*foco*/
+    border-radius: 5px;
+    width: auto;
+}
+
+.form-basic input[type=checkbox]{
+    margin-top: 13px;
+    outline-color: #00ff00;/*foco*/
+    border-radius: 5px;
+}
+
+.form-basic select{
+    background-color: #ffffff;
+    color:  #5f5f5f;
+    box-sizing: border-box;
+    /*max-width: 500px;*/
+    width: 380px;
+    box-shadow: 1px 2px 4px 0 rgba(0, 0, 0, 0.08);
+    padding: 12px 8px;
+    border: 1px solid #dbdbdb;
+    outline-color: #00ff00; /*foco*/
+    border-radius: 5px;
+
+}
+
+.form-basic select:expanded{
+    outline-color: #00ff00; /*foco*/
+}
+
+
+.form-basic textarea{
+    color:  #5f5f5f;
+    box-sizing: border-box;
+    width: 380px;
+    height: 80px;
+    box-shadow: 1px 2px 4px 0 rgba(0, 0, 0, 0.08);
+    font: normal 13px sans-serif;
+    padding: 12px;
+    border: 1px solid #dbdbdb;
+    resize: vertical;
+    outline-color: #00ff00;/*foco*/
+    border-radius: 5px;
+}
+
+.form-basic .form-radio-buttons{
+    display: inline-block;
+    vertical-align: top;
+}
+
+.form-basic input:read-only, .form-basic textarea:read-only{    
+    background-color: #ebebe4;
+}
+
+.form-basic input:disabled, .form-basic select:disabled{
+    opacity: 0.6;
+    color: #dbdbdb;
+
+}
+
+.form-basic input[type=checkbox]:disabled{
+    /*background-color: #ebebe4;*/
+}
+
+.form-basic .selectDisabled:disabled{
+    opacity: 1;
+    color: #5f5f5f;
+    background-color: #ebebe4;
+}
+
+.form-basic .form-radio-buttons > div{
+    margin-top: 10px;
+}
+
+.form-basic .form-radio-buttons label span{
+    margin-left: 8px;
+    color: #5f5f5f;
+    font-weight: normal;
+}
+
+.form-basic .form-radio-buttons input{
+    width: auto;
+}
+
+.form-basic  .btnFormulario{
+    display: table;
+    border-radius: 5px;
+    background-color: #181717;
+    color: #ffffff;
+    font-weight: bold;
+    box-shadow: 1px 2px 4px 0 rgba(0, 0, 0, 0.3);
+    padding: 14px 22px;
+    border: 0;
+    margin: 20px auto 20px auto;
+
+    outline-color: #00ff00;/*foco*/   
+
+}
+
+.form-basic .btnFormulario:hover{    
+    color: #fff;
+    background: linear-gradient(to bottom right, #4c565e, black);
+}
+
+.form-basic .btnFormulario.current{    
+    color: #000000;
+    background: linear-gradient(to bottom right, white, #00ff00);
+}
+
+.form-basic .form-botones{
+    align-content: center;
+}
+
+.form-basic .form-botones{
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+/*botones ON*/
+.form-basic .form-botones button{   
+
+    display: inline-block;    
+    outline: none;
+    cursor: pointer;
+    width: 48px;
+    height: 48px;
+    background-color: transparent;
+    border: none;
+    border-radius: 7px;		
+    background-repeat: no-repeat;  
+    transition-duration: 0.4s;      
+    border: none;
+    /*margenes alrededor de los botones*/
+    margin: 40px 10px 40px 10px;  
+
+}
+
+.form-basic .form-botones button:hover{    
+    box-shadow: 0 4px 8px 0px rgba(0,0,0,0.24),0 2px 4px 0px rgba(0,0,0,0.19);	
+    transform:scale(1.2);	
+    transition-duration: 0.4s;	
+    border-radius: 7px;	
+}
+
+
+.form-basic .form-botones button:active{
+    transform:scale(0.7);	
+    transition-duration: 0.2s;	
+    border-radius: 10px;
+}
+
+.form-basic .form-botones button:disabled{   
+    opacity: 0.3;
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+    filter: grayscale(100%); 
+}
+
+
+.form-basic .btnFormAceptar{
+    background-image: url(../images/48x48/aceptar.png);  
+}
+
+.form-basic .btnFormNoAceptar{
+    background-image: url(../images/48x48/noConforme.png);  
+}
+
+.form-basic .btnFormBorrar{
+    background-image: url(../images/48x48/borrar.png);  
+}
+
+.form-basic .btnFormModificar{
+    background-image: url(../images/48x48/modificar.png);  
+}
+
+.form-basic .btnFormLimpiar{
+    background-image: url(../images/48x48/limpiar.png);  
+}
+
+.form-basic .btnFormCancelar{
+    background-image: url(../images/48x48/cancelar.png);  
+}
+
+.form-basic .btnFormAtras{
+    background-image: url(../images/48x48/atras.png);  
+}
+
+.form-basic .btnFormEnviar{
+    background-image: url(../images/48x48/enviar.png);  
+}
+
+.form-basic .btnFormImprimir{
+    background-image: url(../images/48x48/imprimir.png);  
+}
+
+.form-basic .btnFormGraficar{
+    background-image: url(../images/48x48/grafica.png);  
+}
+
+.form-basic .btnFormGraficarCalidad{
+    background-image: url(../images/48x48/graficaCalidad.png);  
+}
+
+.form-basic .btnFormGraficaPdf{
+    background-image: url(../images/48x48/graficaPdf.png);  
+}
+
+.form-basic .btnFormGraficaPdfCalidad{
+    background-image: url(../images/48x48/graficaPdfCalidad.png);  
+}
+
+.form-basic .btnFormExcel{
+    background-image: url(../images/48x48/excel.png);  
+}
+
+.form-basic .btnFormPdf{
+    background-image: url(../images/48x48/verPdf.png);  
+}
+
+.form-basic .btnFormCostes{
+    background-image: url(../images/48x48/costes.png);  
+}
+
+.form-basic .btnFormPdfCalidad{
+    background-image: url(../images/48x48/verPdfCalidad.png);  
+}
+
+.form-basic .btnFormDescargarPdf{
+    background-image: url(../images/48x48/descargarPdf.png);  
+}
+
+.form-basic .btnCerrarSesion{
+    background-image: url(../images/48x48/cerrarSesion.png);  
+}
+
+.form-basic .btnFormEnviarDatos{
+    background-image: url(../images/48x48/enviarDatos.png);  
+}
+
+/******************Interruptor///////////////////*/
+
+.interruptor{  
+    visibility: hidden;        
+}
+
+
+.interruptorON{   
+    width: 50px;
+    height: 50px;
+    background-repeat: no-repeat;
+    background-image: url(../images/48x48/aceptar.png);  
+}
+
+.interruptorOFF{   
+    width: 50px;
+    height: 50px;
+    background-repeat: no-repeat;
+    background-image: url(../images/48x48/cancelar.png);  
+}
+/******************Interruptor///////////////////*/
+
+/******************boton///////////////////*/
+
+.form-row .boton{  
+    width: 50px;
+    height: 50px;
+    background-repeat: no-repeat;
+    background-image: url(../images/48x48/aceptar.png);  
+    
+}
+
+/******************boton///////////////////*/
+
+
+/******************Conexion///////////////////*/
+.conexion{   
+    width: 50px;
+    height: 50px;
+    background-repeat: no-repeat;
+    background-image: url(../images/48x48/conexion.png);  
+}
+
+.conexionON{   
+    width: 50px;
+    height: 50px;
+    background-repeat: no-repeat;
+    background-image: url(../images/48x48/conexionOn.png);  
+}
+
+.conexionOFF{    
+    width: 50px;
+    height: 50px;
+    background-repeat: no-repeat;
+    background-image: url(../images/48x48/conexionOff.png);  
+}
+
+/******************Conexion///////////////////*/
+
+
+
+/*//////////////Estilo validacion formulario*/
+.form-basic .form-row label.error{
+    font-size: 0.8em;
+    background-color: red;
+    border-radius: 2px;
+    color: white;
+    font-weight: bold;
+    display: block;
+    margin-top: 5px;
+    margin-left: 150px;    
+    padding: 5px;
+}
+
+.form-basic .divBusqueda{
+    margin-left: 0px;
+    margin-right: 0px;    
+    overflow: auto;    
+}
+
+
+.form-basic .divTablaDatos{
+    /*    padding-left: 50px;
+        padding-right: 50px;*/
+    margin-left: 0px;
+    margin-right: 0px;
+    /*min-height: 80%;*/
+    /*width: auto;*/
+    /*min-height: 800px;*/
+    /*height: auto;*/
+    /*margin: 0 auto;*/
+    padding-top: 50px;
+    /*padding-bottom: 50px;*/
+
+    /*text-align: left;*/    
+    overflow: auto;
+
+}
+
+/*Para div de graficas*/
+.form-basic .divGrafica{  
+    height: 900px;
+    margin-left: 10px;
+    margin-right: 10px;    
+    overflow: auto;
+    /*background-color: #00ff00;*/    
+}
+
+.form-basic .divGrafica .chartdiv{
+    width: 100%;
+    height: 90%;
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-right: 0px;    
+    /*background-color: #003eff;*/   
+
+}
+
+.form-basic .dina4Vertical {
+    width: 210mm;
+    height: 297mm;
+    padding: 20px 60px; 
+/*    border: 1px solid #D2D2D2; 
+    background: #fff;*/
+    margin: 10px auto;
+}
+
+.form-basic .dina4Horizontal {
+    width: 250mm;
+    height: 150mm;
+    /*padding: 0px 0px;*/ 
+/*    border: 1px solid #D2D2D2; 
+    background: #fff;*/
+    margin: auto;
+}
+
+
+/*botones ON menu    --    --   -- */
+.btnMenu button{
+    display: inline-block;    
+    outline: none;
+    cursor: pointer;
+    width: 32px;
+    height: 32px;
+    background-color: transparent;
+    border: none;
+    border-radius: 7px;		
+    background-repeat: no-repeat;  
+    transition-duration: 0.4s;   
+    /*margenes alrededor de los botones*/
+    margin: 10px 5px 10px 5px;  
+
+}
+
+.btnMenu button:hover{    
+    box-shadow: 0 4px 8px 0px rgba(0,0,0,0.24),0 2px 4px 0px rgba(0,0,0,0.19);	
+    transform:scale(1.2);	
+    transition-duration: 0.4s;	
+    border-radius: 7px;	
+}
+
+
+.btnMenu button:active{
+    transform:scale(0.7);	
+    transition-duration: 0.2s;	
+    border-radius: 10px;
+}
+
+.btnMenu button:disabled{   
+    opacity: 0.3;
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+    filter: grayscale(100%); 
+}
+
+
+.btnMenu .btnAtras{
+    background-image: url(../images/32x32/atras.png);  
+}
+
+.btnMenu .btnAdelante{
+    background-image: url(../images/32x32/adelante.png);  
+}
+
+.btnMenu .btnActualizar{
+    background-image: url(../images/32x32/actualizar.png);  
+}
+
+.btnMenu .btnHome{
+    background-image: url(../images/32x32/home.png);  
+}
+
+
+
+.ir-arriba {
+    display:none;
+    outline: none;
+    cursor: pointer;
+    width: 48px;
+    height: 48px;
+    background-color: transparent;
+    border: none;
+    border-radius: 7px;		
+    background-repeat: no-repeat;  
+    /*transition-duration: 0.4s;*/   
+
+    position: fixed;
+    bottom:20px;
+    right:20px;
+    background-image: url(../images/48x48/subir.png);
+
+    z-index: 10000;   
+    
+    opacity: 0.5;
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+    filter: grayscale(100%); 
+    
+    -webkit-animation: 2s intermitente infinite;
+    
+}
+
+@-webkit-keyframes intermitente {
+  25%, 75% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 1;
+    -webkit-filter: grayscale(30%);
+    -moz-filter: grayscale(30%);
+    -o-filter: grayscale(30%);
+    -ms-filter: grayscale(30%);
+    filter: grayscale(30%); 
+  }
+}
+
+.ir-arriba:hover{
+    opacity: 1;
+    -webkit-filter: grayscale(0%);
+    -moz-filter: grayscale(0%);
+    -o-filter: grayscale(0%);
+    -ms-filter: grayscale(0%);
+    filter: grayscale(0%);
+    
+    box-shadow: 0 4px 8px 0px rgba(0,0,0,0.24),0 2px 4px 0px rgba(0,0,0,0.19);
+    transform:scale(1.2);	
+    transition-duration: 0.4s;	
+    border-radius: 7px;
+}
+
+
+
+
+/*Estilo de las flechas************************************************/
+.flecha{ 
+    margin: 0px;
+    padding: 0px;
+    position:relative; 
+    color: #5f5f5f;
+    /*background-color: #00ff00;*/
+    /*transform:rotateY(180deg);*/
+    font-size:40px;    
+} 
+
+
+
+/*	Making the form responsive. Remove this media query
+    if you don't need the form to work on mobile devices. */
+
+/*@media (max-width: 1000px) {
+
+    .form-basic{
+        padding: 30px;
+        max-width: 900px;
+    }
+
+    .form-basic .form-row{
+        max-width: 500px;
+        margin: 25px auto;
+        text-align: left;
+    }
+
+    .form-basic .form-title-row{
+        margin-bottom: 20px;
+    }
+
+    .form-basic .form-row > label span{
+        display: block;
+        text-align: left;
+        padding: 0 0 15px;
+    }
+
+    .form-basic select{
+        width: 240px;
+    }
+
+    .form-basic input[type=checkbox]{
+        margin-top:0;
+    }
+
+    .form-basic .form-radio-buttons > div{
+        margin: 0 0 10px;
+    }
+
+    .form-basic button{
+        margin: 0;
+    }
+
+}*/

@@ -1,0 +1,47 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 20-dic-2016, 8:52:29
+    Author     : OnAngel
+*/
+
+/*Reset y estilos generales*/
+@import "reset.css";
+@import "estilo.css";
+/*Cabecera*/
+@import "jquery-ui-1.10.4.css";
+@import "cabeceraPagina.css";
+/*Pie de pagina*/
+@import "piePagina.css";
+/*Formularios*/
+@import "formularios.css";
+/*Filtros de búsquedas*/
+@import "filtrosBusquedas.css";
+/*Tablas*/
+@import "tablasRegistroHorario.css";
+/*Alertas https://limonte.github.io/sweetalert2/*/
+@import "sweetalert2.css";
+/*Animate https://daneden.github.io/animate.css/*/
+@import "animate.css";
+/*Tooltips*/
+@import "tooltip.css";
+/*Tabs*/
+@import "tab.css";
+/*Informes*/
+@import "informes.css";
+
+@import "codigoBarra.css";
+/*tree */
+@import "jstree/style.min.css";
+
+@import "rangeslider.css";
+
+/*Responsive*/
+@import "responsive.css";
+
+@import "stacktable/stacktable.css";
+
+

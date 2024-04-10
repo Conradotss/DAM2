@@ -1,0 +1,219 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 19-may-2017, 12:55:20
+    Author     : Onelectric
+*/
+#logobase2{
+    /*width: auto !important; 
+    height: auto !important; 
+    min-height: 400px !important;
+    max-width: 1000px !important; */
+    
+}
+
+.form-basic-Informe{
+    /*max-width: var(--max-width);*/ 
+    min-height: 80%;
+    width: auto;
+    /*min-height: 800px;*/
+    /*height: auto;*/
+    margin: 50px;
+/*    padding-top: 50px;
+    padding-bottom: 50px;*/
+    box-sizing: border-box;
+    /*border-radius: 10px;*/
+    background-color:  #ffffff;
+    /*box-shadow: 1px 2px 8px 0px rgba(255,255,255,1);*/
+    /*background: linear-gradient(to bottom right, white, #f7fff7);*/
+
+    font: bold 14px sans-serif;
+    /*text-align: left;*/    
+    overflow: auto;
+}
+
+form-basic-InformeCom{
+     /*max-width: var(--max-width);*/ 
+    min-height: 80%;
+    width: auto;
+    /*min-height: 800px;*/
+    /*height: auto;*/
+    margin: 0 auto;
+/*    padding-top: 50px;
+    padding-bottom: 50px;*/
+    box-sizing: border-box;
+    /*border-radius: 10px;*/
+    background-color:  #ffffff;
+    /*box-shadow: 1px 2px 8px 0px rgba(255,255,255,1);*/
+    /*background: linear-gradient(to bottom right, white, #f7fff7);*/
+
+    font: bold 14px sans-serif;
+    /*text-align: left;*/    
+    overflow: auto;
+    
+}
+
+.tablaCabeceraInforme{
+    border: 1px #003eff solid;
+    width: 100%;
+}
+.logoEmpresa{
+    height: 96px;
+}
+.form-basic-Informe .form-title-Informe{
+    text-align: center;
+    margin-bottom: 10px;
+    overflow: auto;
+    display: block;
+    padding-bottom: 10px;
+  
+}
+
+/* The form title */
+
+.form-basic-Informe h1{
+    display: inline-block;
+    box-sizing: border-box;
+    color:  #4c565e;
+    font-size: 20px;
+    padding: 0 5px 5px;
+    border-bottom: 2px solid #4c565e;/*Color de línea*/
+    margin: 0;
+}
+
+.form-basic-Informe .clienteInforme{
+    color: #4c565e;  
+    font-size: 14px;  
+    width: 30mm;
+}
+
+.form-basic-Informe .form-title-Registro{
+    text-align: center;
+    display: inline-block;    
+    /*background-color: #003eff;*/
+}
+
+.form-basic-Informe .tituloDiv{
+    color: #171717;  
+    border-radius: 5px;
+    /*    border: 1px solid #dbdbdb;*/
+    display: block;
+    width: auto;
+    border-top: 1px solid #dbdbdb;
+    border-left: 1px solid #dbdbdb;
+    border-right: 1px solid #dbdbdb;
+    text-align: center;
+    background-color: #dbdbdb;  
+}
+
+.form-basic-Informe .divform{
+    background: transparent;  /* Fondo del contenido */
+    border-radius: 5px;
+    /*    border: 1px outset #dbdbdb;*/
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 10px;
+    padding-bottom: 10px;    
+    border: 1px solid #dbdbdb;
+    box-shadow: 2px 3px 6px 0 rgba(0, 0, 0, 0.08);
+    overflow: auto;
+    min-width: 99%; 
+    margin-bottom: 10px;   
+    /*width: auto;*/
+    /*background-color: #00ff00;*/
+    /*box-shadow: 1px 1px 2px 0px rgba(70, 70, 70, 1);*/
+}
+
+.datosInforme{
+    display: inline-block; 
+    margin-right: 30px;
+    font-weight: bold;
+
+
+}
+
+
+/*
+informe produccion ot
+*/
+.form-basic-InformeCom .form-title-Informe{
+    text-align: center;
+    margin-bottom: 10px;
+    overflow: auto;
+    display: block;
+    padding-bottom: 10px;
+}
+
+/* The form title */
+
+.form-basic-InformeCom h1{
+    display: inline-block;
+    box-sizing: border-box;
+    color:  #4c565e;
+    font-size: 20px;
+    padding: 0 5px 5px;
+    border-bottom: 2px solid #4c565e;/*Color de línea*/
+    margin: 0;
+}
+
+.form-basic-InformeCom .clienteInforme{
+    color: #4c565e;  
+    font-size: 14px;  
+    width: 30mm;
+    font-weight: bold;
+}
+
+.form-basic-InformeCom .form-title-Registro{
+    text-align: center;
+    display: inline-block;    
+    /*background-color: #003eff;*/
+}
+
+.form-basic-InformeCom .tituloDiv{
+    color: #171717;  
+    border-radius: 5px;
+    /*    border: 1px solid #dbdbdb;*/
+    display: block;
+    width: auto;
+    border-top: 1px solid #dbdbdb;
+    border-left: 1px solid #dbdbdb;
+    border-right: 1px solid #dbdbdb;
+    text-align: center;
+    background-color: #dbdbdb;  
+}
+
+.form-basic-InformeCom .divform{
+    background: transparent;  /* Fondo del contenido */
+    border-radius: 5px;
+    /*    border: 1px outset #dbdbdb;*/
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 10px;
+    padding-bottom: 10px;    
+    border: 1px solid #dbdbdb;
+    box-shadow: 2px 3px 6px 0 rgba(0, 0, 0, 0.08);
+    overflow: auto;
+    min-width: 99%; 
+    margin-bottom: 10px;   
+    /*width: auto;*/
+    /*background-color: #00ff00;*/
+    /*box-shadow: 1px 1px 2px 0px rgba(70, 70, 70, 1);*/
+}
+
+/*body {
+    counter-reset: page_number;
+}
+
+#page-number:after {
+    counter-increment: page_number;
+    content: counter(page_number);
+}*/
+
+/*@page {
+   @bottom-right {
+    content: counter(page) " of " counter(pages);
+   }
+}*/

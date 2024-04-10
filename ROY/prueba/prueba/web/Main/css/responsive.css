@@ -1,0 +1,298 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 15-jul-2017, 11:03:28
+    Author     : OnAngel
+*/
+
+
+/* RESPONSIVE DESIGN */
+
+*{
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    -ms-box-sizing:border-box;
+    box-sizing:border-box
+}
+
+/* =Media query para menu
+-------------------------------------------------------------- */
+@media only screen and (max-width:960px){
+    .btnMenuEnlaces{
+        display: none;
+        visibility: hidden;    
+        position: fixed;  
+        z-index: 100;    
+        width: calc(100% - 55px);
+    }
+
+    .btnMenuEnlaces li{
+        width: 99.5%; 
+        margin: 0.5%;             
+    }
+
+    .btnMenuEnlaces li a{
+        width: 100%;          
+    }
+
+    .btnMenu .btnMenuResponsive{         
+        display: block;
+        visibility: visible;
+    }
+
+
+}
+
+@media only screen and (min-width:751px){   
+
+
+    .menuAccesosPrincipales{
+        display: inline-block !important;
+    }
+
+}
+
+@media only screen and (max-width:750px){   
+
+
+    .menuAccesosPrincipales{
+        display: none !important;
+    }
+
+}
+
+
+@media only screen and (max-width:600px){   
+
+
+    .form-basic .form-row > label span{  
+        /*display: inline;*/        
+        text-align: left;
+        padding: 12px 0 5px;   
+        width: auto;
+        margin-left: 1%;
+
+
+    }
+
+    div.form-row{
+
+
+        width: 100%;
+        /*        margin: 25px auto;
+                text-align: left;*/
+        /*background-color: green;*/
+        padding: 0px;
+        margin: 0px;
+    }
+
+
+
+
+    .form-basic input{
+        display: inline;
+        min-width: 100%;
+    }
+
+    .form-basic textarea{
+        display: inline;
+        min-width: 100%;
+        /*margin-right: 10px;*/
+    }
+
+    .form-basic select{
+        display: inline;
+        min-width: 100%;
+        /*min-width: 300px;*/
+    }
+
+
+    .buttonActualizar, .buttonCrear{
+        display: inline;
+        margin: 0px;
+    }
+
+    /*//////////////Estilo validacion formulario*/
+    .form-basic .form-row label.error{      
+        display: block;   
+        width: 100%;
+        margin-top: 5px;
+        margin-left: 0px;    
+        padding: 5px;
+    }
+
+    label.error{
+        /*font-size: 0.8em;
+        background-color: red;
+        border-radius: 2px;
+        color: red;
+        font-weight: bold;
+        display: block;
+        margin-top: 5px;
+        margin-left: 0px;    
+        padding: 5px;*/
+    }
+
+
+    .btnTab{
+        margin: 0px;
+        padding: 0px;
+        height: 0px;
+        visibility: hidden;
+        display: inline;
+        float: left;
+    }
+
+
+    .labelTab {        
+        display: inline;
+        padding: 0px;
+        text-align: center;
+        width: 100%;  
+        margin-bottom: 1%;
+    }
+
+
+
+    .form-basic .divLogin .form-row > label span{  
+        text-align: right;
+    }
+
+    .swal2-modal.swal-wide{
+        min-width: 100% !important;    
+        max-width: 100% !important;
+    }
+}
+
+@media only screen and (max-width:600px){
+
+    .divLogin{
+        text-align: left;
+        /*background-color: red;*/
+    }
+
+
+    .form-basic .divLogin .form-row > label{  
+        text-align: left;
+
+    }
+
+    .form-basic .divLogin .form-row > label span{  
+        text-align: left;
+        margin-left: 3%;
+        width: 100%;
+
+    }
+
+
+
+
+    #tablaBusqueda .formfila{
+        /*background-color: #00f0f0;*/
+        width: auto;
+        padding: 0px;
+        margin: 0px;
+        text-align: left;
+    }
+
+    #tablaBusqueda .formfila > label{
+        /*background-color: #003eff;*/
+        width: 100%;
+        padding: 0px;
+        margin: 0px;
+        text-align: left;
+    }
+
+    #tablaBusqueda .formfila > label span{
+        /*background-color: red;*/
+        /*width: 20%;*/
+        padding: 10px 10px 0px;
+        margin-left: 1%;
+        text-align: left;
+    }
+
+    #tablaBusqueda .formfila > label input, select{
+
+        min-width: 100%;
+
+    }
+    #tablaBusqueda .formfila > label select{
+
+        min-width: 100%;
+
+    }
+
+    .form-basic .form-row-add{
+        /*display: inline-block;*/
+
+
+    }
+
+    .form-basic .form-row-add form-row label select{
+        /*display: table;*/
+        width: 100% !important;
+
+        /*max-width: 20% !important;*/
+
+    }
+
+    .form-basic .form-row-add label{
+        margin: 0px !important;
+    }
+
+    .cabecera {
+        /*display: inline-block;*/
+        text-align: center;
+    }
+
+    .cabecera .divInicioSesion ul{
+        text-align: right !important;        
+    }
+
+    .cabecera .divInicioSesion ul li:nth-last-child(1){
+        text-align: right;
+        display: inline;
+        padding-top: 10px;
+    }
+    .tabla tbody tr td input {
+        width: 90% !important;
+        text-align: center !important;
+    }
+    .tabla tbody tr td textarea {
+        width: 90% !important;
+        min-width: 90% !important;
+        max-width: 90% !important;
+        text-align: center !important;
+    }
+    .tabla tbody tr td output {
+        width: 90% !important;
+        min-width: 90% !important;
+        max-width: 90% !important;
+        text-align: center !important;
+    }
+    .tabla tbody tr td {
+        text-align: center !important;
+    }
+    .tabla tbody tr td div{
+        width: 100% !important;
+        text-align: center !important;
+    }
+    .tabla tbody tr th div{
+        width: 100% !important;
+        text-align: center !important;
+    }
+    
+
+}
+
+/* =Media query para iPad y tablets
+-------------------------------------------------------------- */
+@media handheld, only screen and (max-width: 768px), only screen and (max-device-width: 768px) and (orientation:portrait){
+
+
+}
+
+

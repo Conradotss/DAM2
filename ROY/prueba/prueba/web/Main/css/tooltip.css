@@ -1,0 +1,71 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 13-dic-2016, 18:49:31
+    Author     : OnAngel
+*/
+
+.tooltip {	    
+    position: relative;	
+    display: inline-block;
+    max-width: 500px;
+    border-top-style: none;
+    border-right-style: none;
+    border-bottom-style: none;
+    border-left-style: none;	
+
+    
+}
+
+.tooltiptext {	
+    z-index: 100;
+    position: absolute; 
+    margin: auto;
+
+    /*posicionar en el centro del objeto*/
+    transform: translate(-43%, 15px);	
+} 
+
+.tooltip .tooltiptext { 
+    
+    visibility: hidden;
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 100;
+    font-family: Tahoma, Geneva, sans-serif;     
+    /*width: 200%;*/
+    background-color: #373737;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 3px 0;    	
+    opacity: 0;	
+    transition: opacity 1s;	
+}
+
+.tooltip .tooltiptext:after {    
+    
+    content: "";
+    position: absolute;    
+    bottom: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent #373737 transparent;
+    
+}
+
+.tooltip:hover .tooltiptext {
+    /*Tiempo de aparecer*/
+    transition-delay: 1s;
+    visibility: visible;
+    opacity: 0.80;
+}
+
+.descbtn {
+    font-size: 9px;
+}
