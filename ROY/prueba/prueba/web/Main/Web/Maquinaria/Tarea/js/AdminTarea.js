@@ -24,7 +24,7 @@ function actualizarTabla() {
     //
     //Capturamos la ruta para envio de datos a servlet
     var pathArray = window.location.pathname.split('/');
-    var urlServlet = "/" + pathArray[1] + "/EliminarTarea";
+    var urlServlet = "/" + pathArray[1] + "/EliminarHerramienta";
     var btnEliminar = "div #btnEliminarTarea";
     var btnModificar = "div #btnModificarTarea";
     //
