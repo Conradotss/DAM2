@@ -1,0 +1,43 @@
+extends ../layout/admin
+
+block contenido 
+    div(class="py-7")
+
+        h1(class="text-white text-4xl font-extrabold text-center mt-2 mb-14")= pagina
+
+        if errores
+            div(class="max-w-md mx-auto my-10")
+                each error in errores
+                    div(role="alert" class="alert alert-error h-auto m-3")
+                        svg(xmlns="http://www.w3.org/2000/svg" class="stroke-current shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24")
+                            path(stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z")
+                        span=error.msg
+
+        div(class="mt-8 mx-auto max-w-md drop-shadow-[0_1px_25px_rgba(251,251,251,1)] hover:drop-shadow-[0_1px_30px_rgba(251,251,251,1)]")
+            div(class="bg-white py-8 px-4 rounded-lg")
+                form(action=`/proyecto/editar/${datos.id}` method="POST" noValidate class="p-3")
+                    input(type="hidden" name="_csrf" value=csrfToken)
+                    legend(class="text-xl font-bold mb-8 text-center -mt-2") Información sobre tu proyecto
+                    div(class="mb-4")
+                        label(for="titulo" class="block text-gray-700 text-sm font-bold mb-2") Título
+                        input(type="text" autocomplete="off" name="titulo" id="titulo" placeholder="Título del proyecto" value=datos.titulo?datos.titulo:'' class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline")
+                    div(class="mb-4")
+                        label(for="descripcion" class="block text-gray-700 text-sm font-bold mb-2") Descripción
+                        textarea(class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" name="descripcion" placeholder="Descripcion del proyecto")=datos.descripcion?datos.descripcion:''
+                    div(class="mb-4")
+                        label(for="tecnologia" class="block text-gray-700 text-sm font-bold mb-2") Tipo de tecnología
+                        select(name="tecnologia" class=" text-center shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline")
+                            option(value="0") --Seleccione--
+                            option(value="JavaScript", selected=datos.tecnologia==='JavaScript'?true:false) JavaScript
+                            option(value="Python", selected=datos.tecnologia==='Python'?true:false) Python
+                            option(value="Java", selected=datos.tecnologia==='Java'?true:false) Java
+                            option(value="C++", selected=datos.tecnologia==='C++'?true:false) C++
+                            option(value="C#", selected=datos.tecnologia==='C#'?true:false) C#
+                            option(value="PHP", selected=datos.tecnologia==='PHP'?true:false) PHP
+                            option(value="Ruby", selected=datos.tecnologia==='Ruby'?true:false) Ruby
+                            option(value="Swift", selected=datos.tecnologia==='Swift'?true:false) Swift
+                            option(value="Go", selected=datos.tecnologia==='Go'?true:false) Go
+                            option(value="TypeScript", selected=datos.tecnologia==='TypeScript'?true:false) TypeScript
+                            option(value="Otros", selected=datos.tecnologia==='Otros'?true:false) Otros
+                    div(class="flex justify-center mt-14")
+                        input( class="bg-green-400 hover:bg-green-500 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit" value="Guardar cambios") 

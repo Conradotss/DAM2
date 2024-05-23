@@ -1,0 +1,25 @@
+extends ../layout/inicio 
+
+block contenido 
+    h1(class="text-white text-5xl font-extrabold italic text-center mt-4 mb-14")=pagina
+
+    div(class="py-10") 
+        //-Linea para imprimir datos en la pagina web -->pre=JSON.stringify(proyecto, undefined, 2)
+
+        div(class="card bg-base-100 shadow-xl w-full m-3 p-6 rounded-lg")
+            div(class="card-body")
+                h2(class="text-center font-bold text-4xl mb-6 underline") Proyecto: #{proyecto.titulo}
+                p(class="font-bold text-2xl text-start mb-2") Descripcion: 
+                    span #{proyecto.descripcion}
+                p(class="font-bold text-2xl text-start mb-2") Autor: #{proyecto.autor}
+                p(class="font-bold text-2xl text-start mb-2") Tecnologia: #{proyecto.tecnologia}
+                p(class="font-bold text-2xl text-start mb-2") Fecha de creación: #{proyecto.createdAt}
+                p(class="font-bold text-2xl text-start mb-2") Última modificación: #{proyecto.updatedAt}
+                
+            div(class="mt-6")
+                h2(class="text-center font-bold text-4xl mb-6 underline") Archivos
+                each archivo in proyecto.archivos
+                    a(href=archivo.ruta_almacenamiento, download, class="bg-blue-500 m-6 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mb-2 inline-block") Descargar #{archivo.nombre}
+            
+                
+            

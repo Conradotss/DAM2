@@ -1,0 +1,19 @@
+extends ../layout/index
+
+block contenido 
+    div(class="py-10")
+            a(href="/auth/registro" class="cursor-pointer") 
+                h1(class="bg-clip-text text-transparent text-6xl bg-gradient-to-r from-green-700 to-white font-extrabold text-center italic ") Gestión
+                    span(class="text-4xl font-extrabold text-white") Archivos
+            
+            h2(class="text-white text-2xl font-extrabold text-center mt-4 mb-14")= pagina
+
+            div(class="mt-8 mx-auto max-w-md drop-shadow-[0_1px_55px_rgba(17,154,168,1)]")
+                div(class="bg-gray-200 py-8 px-4")
+                    p(class=error ? 'text-red-400' : 'text-green-400').font-extrabold.text-center=mensaje
+
+            if !error
+                a(href="/auth/login") 
+                    div(class="text-center")
+                        h4(class="bg-clip-text text-transparent text-3xl bg-gradient-to-r from-green-700 to-white font-extrabold text-center italic mt-16 hover:text-white") Iniciar Sesión
+                

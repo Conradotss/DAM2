@@ -1,0 +1,11 @@
+extends ../layout/index
+
+block contenido 
+    div(class="py-10")
+            a(href="/auth/login" class="cursor-pointer") 
+                h1(class="bg-clip-text text-transparent text-6xl bg-gradient-to-r from-green-700 to-white font-extrabold text-center italic ") Gestión
+                    span(class="text-4xl font-extrabold text-white") Archivos
+            
+            h2(class="text-white text-2xl font-extrabold text-center mt-4 mb-14")= pagina
+
+            p(class="text-white text-xl font-extrabold text-center mt-4 mb-14")= mensaje
