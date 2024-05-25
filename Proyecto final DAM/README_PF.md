@@ -1,4 +1,13 @@
 # Proyecto final DAM
-# Ire guargando los cambios que haga desde el inicio hasta el final de la aplicacion
-En este punto llevamos hecho las interfaces de Main, la pantalla de carga, la de inicio, login y registros, todas por ahora funcionan 
-a la perfeccion
+# Proyecto GestionArchivos
+## Pasos resumidos realizado en el proyecto
+* Creación de templates auth (login, registro, recuperar Contraseña)
+* Configuración de los templates auth
+* Configuración de envio de emails para confirmar cuenta del usuario registrado
+* Creación de templates de inicio
+* Configuración de funciones para crear proyecto
+* Configuración para subir archivos
+* Creación y configuracion de pargina princiapl donde se mostrarán los proyectos creados
+* Configuracion de paginación cada 6 proyectos creados
+
+
