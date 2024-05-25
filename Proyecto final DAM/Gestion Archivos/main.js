@@ -1,6 +1,7 @@
 import express from 'express'
 import UsuariosRoutes from './routes/UsuariosRoutes.js'
 import GestionArchivosRoutes from './routes/GestionArchivosRoutes.js'
+import InicioRoutes from './routes/InicioRoutes.js'
 import db from './config/database.js'
 import cookieParser from 'cookie-parser'
 import csrf from 'csurf'
@@ -34,6 +35,7 @@ app.use(csrf({cookie: true}))
 //A diferencia de funcion get que solo busca la ruta especifica "/"
 app.use('/auth', UsuariosRoutes)
 app.use('/', GestionArchivosRoutes)
+app.use('/', InicioRoutes)
 
 //Carpeta publica
 //Ubicamos la carpeta donde se encuentra tailwind

@@ -6,7 +6,7 @@ const token = document.querySelector('meta[name="csrf-token"]').getAttribute('co
 Dropzone.options.archivos = {
     dictDefaultMessage: 'Sube tus archivos aquí',
     acceptedFiles: '.pdf,.doc,.docx,.ppt,.pptx,.xls,.xlsx,.zip,.rar,.jpg,.jpeg,.png,.gif,.svg,.mp4,.mp3,.avi,.mov,.flv,.wmv, .txt',
-    maxFilesize: 100, //Peso máximo en MB
+    maxFilesize: 150, //Peso máximo en MB
     maxFiles: 10, //Cantidad máxima de archivos
     parallelUploads: 10, //Subir 1 archivo a la vez
     autoProcessQueue: false, //Previene que se suban los archivos automáticamente

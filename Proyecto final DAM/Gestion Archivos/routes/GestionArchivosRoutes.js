@@ -1,11 +1,12 @@
 import express from 'express';
 import { body } from 'express-validator';
-import { dashboard, nuevoProyecto, guardarProyecto, agregarArchivos, guardarArchivos, editarProyecto, GuardarCambiosProyecto, eliminarProyecto, inicio} from '../controllers/GestionArchivosController.js';
+import {info, dashboard, nuevoProyecto, guardarProyecto, agregarArchivos, guardarArchivos, editarProyecto, GuardarCambiosProyecto, eliminarProyecto, inicio} from '../controllers/GestionArchivosController.js';
 import proteccionRutas from '../middleware/proteccionRutas.js';
 import upload from '../middleware/subirArchivos.js';
 
 const router = express.Router();
 
+router.get('/acerca-de', info);
 router.get('/mis-proyectos',proteccionRutas, dashboard);
 router.get('/nuevo-proyecto',proteccionRutas, nuevoProyecto);
 router.post('/nuevo-proyecto', proteccionRutas,

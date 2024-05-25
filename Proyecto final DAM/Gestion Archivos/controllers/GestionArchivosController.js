@@ -1,6 +1,14 @@
 import {unlink} from "node:fs/promises";
 import { validationResult } from "express-validator";
 import {Proyecto, Archivo} from "../models/relaciones.js";
+import {Op} from "sequelize";
+
+const info = (req, res) => {
+    res.render('template/acerca-de', {
+        
+    })
+
+}
 
 const inicio = async (req, res) => {
 
@@ -26,8 +34,8 @@ const inicio = async (req, res) => {
 }
 
 const dashboard = async (req, res) => {
-
-    const {pagina: paginaActual} = req.query;
+    const {pagina: paginaActual, busqueda} = req.query;
+    console.log("Pagina actual: "+paginaActual)
 
     const expresionRegular = /^[0-9]$/ // Expresion regular para validar que empieza y termina por un numero 
 
@@ -36,9 +44,8 @@ const dashboard = async (req, res) => {
     }
 
     const { id } = req.usuario;
-    const { busqueda } = req.body;
 
-    const limite = 6;
+    const limite = 8;
     const offset = ((paginaActual * limite) - limite)
 
     const whereOptions = {
@@ -69,7 +76,6 @@ const dashboard = async (req, res) => {
     ])
 
     console.log("Proyectos totales que tiene el usuario actual: "+total);
-
     res.render('gestion/dashboard', {
         pagina: 'Inicio',
         estado: 'Aun no tienes proyectos creados',
@@ -82,6 +88,7 @@ const dashboard = async (req, res) => {
         offset
     });
 }
+
 const nuevoProyecto = (req, res) =>
 {
     res.render('gestion/nuevo-proyecto',{
@@ -254,6 +261,7 @@ const eliminarProyecto = async (req, res) => {
 
 
 export {
+    info,
     inicio,
     dashboard,
     nuevoProyecto,
