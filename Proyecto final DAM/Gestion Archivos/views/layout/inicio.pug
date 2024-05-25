@@ -4,13 +4,11 @@ html(lang="es")
         meta(charset="UTF-8")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         link(rel="stylesheet", href="/css/estilos.css")
+        link(rel="stylesheet", href="/css/estilos2.css")
         block styles
-        title Gestion Archivos | #{pagina}
+        title Gestion Archivos
         
-    body(class="min-h-screen bg-zinc-900")
-        include includes/header-inicio
+    body(class="min-h-screen", style="background-image: url('/img/inicio.jpg'); opacity: 1;")
 
-        main(class="mx-auto container px-2")
+        main(class="mx-auto container px-2" )
             block contenido
-
-            block scripts

@@ -1,9 +1,27 @@
-extends ../layout/index
+extends ../layout/inicio
 
 block contenido
     div(class="py-10")
-        a(href="/auth/registro" class="cursor-pointer") 
+        a(href="/" class="cursor-pointer") 
             h1(class="bg-clip-text text-transparent text-6xl bg-gradient-to-r from-green-700 to-white font-extrabold text-center italic ") Gestión
                 span(class="text-4xl font-extrabold text-white") Archivos
 
-                button ponte encima mio
+        div(class="flex flex-row justify-around mt-[200px]")
+            a(href="/auth/login") 
+                button.animated-button
+                    svg(viewBox="0 0 24 24", class="arr-2", xmlns="http://www.w3.org/2000/svg")
+                        path(d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z")
+                    span.text Iniciar Sesion
+                    span.circle
+                    svg(viewBox="0 0 24 24", class="arr-1", xmlns="http://www.w3.org/2000/svg")
+                        path(d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z")
+            a(href="/auth/registro")     
+                button.animated-button
+                    svg(viewBox="0 0 24 24", class="arr-2", xmlns="http://www.w3.org/2000/svg")
+                        path(d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z")
+                    span.text Crear Cuenta
+                    span.circle
+                    svg(viewBox="0 0 24 24", class="arr-1", xmlns="http://www.w3.org/2000/svg")
+                        path(d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z")
+
+            
