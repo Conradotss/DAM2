@@ -1,0 +1,41 @@
+1. Título del proyecto:
+Gestión Documental de Proyectos fin de Ciclo
+2. Descripción del proyecto:
+Esta página web permitirá a los distintos usuarios crear, almacenar y modificar
+proyectos guardados dentro de un sistema de ficheros y gestionado por una base de datos,
+además de guardar dentro de esta información adicional (como fecha, autor, titulo, tutor,
+tecnologías empleadas, tipo de proyecto, ciclo, ...)
+3. Concreta qué es lo que vas a hacer o presentar:
+Crearé una página web con diferentes tecnologías, este tendrá la finalidad de permitir a los
+usuarios poder almacenar y gestionar proyectos, además de la funcionalidad de poder buscar a
+cada usuario un archivo especifico, este proyecto también contara con una función de login
+para la creación de usuarios, que incluye gestión de accesos de usuarios autorizados, altas,
+bajas y modificaciones de proyectos
+4. Qué tecnologías vas a utilizar (hardware, comunicaciones, software de todo tipo y
+lenguajes)
+Hardware: Iré usando tanto el ordenador de sobremesa, por tema de potencia y
+comodidad y el portátil cuando sea necesario
+Comunicaciones: Usaré Github para ir mostrando los avances de mi proyecto en esta
+url, https://github.com/Conradotss/DAM2/tree/main/Proyecto%20final%20DAM
+Software: Para la creación de este proyecto usare el IDE Visual Studio Code por
+facilidad de incorporación de las tecnologías que voy a utilizar. Las tecnologías que utilizaré
+serán:
+Backend:
+Node.js -&gt; Con el lenguaje JavaScript para manejar la parte lógica de la aplicación
+MongoBD -&gt; Para la Base de Datos
+Frontend:
+Lenguaje de marcas -&gt; Html, css, (además de javascrpit para darle ciertas
+funcionalidades a la página, como verificación de formularios, etc). Con esa descripcion de el proyecto que hare mas alguna informacion de relevancia extra quiero que me hagas unos puntos para la documentacion de el proyecto en cuestion la descripcion ha de ser extensa.    primero desarrollame este punto    Establecer el objetivo de lo que se quiere hacer y analizar su idoneidad.
+a. Explicar qué se va a hacer.
+b. Analizar la utilidad.
+i. Qué beneficios aporta.
+ii. Quién puede estar interesado.
+iii. Realizar un estudio de similares existentes.
+
+
+te voy a pasar una descripcion de un proyecto que tengo que hacer, con la descripcion que te proporcione, quiero que me crees una documentacion siguiendo los puntos que te proporcionare a parte de acuerdo? esta documentacion debe tener informacion sobre el proyecto extensa y que concuerde con el proyecto qe voy a dedsarrollar
+
+
+
+
+

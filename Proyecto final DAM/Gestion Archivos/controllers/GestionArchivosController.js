@@ -10,6 +10,15 @@ const info = (req, res) => {
 
 }
 
+const filtro = async (req, res) => {
+    const {busqueda: busquedaAnterior} = req.body;
+    console.log("Busqueda anterior: "+busquedaAnterior)
+
+        return res.redirect(`/mis-proyectos?pagina=1&busqueda=${busquedaAnterior}`); // Si no es un numero o no tiene, redirige a la pagina 1
+    
+
+}
+
 const inicio = async (req, res) => {
 
     const {id} = req.params;
@@ -34,13 +43,14 @@ const inicio = async (req, res) => {
 }
 
 const dashboard = async (req, res) => {
-    const {pagina: paginaActual, busqueda} = req.query;
-    console.log("Pagina actual: "+paginaActual)
+    const { pagina: paginaActual, busqueda } = req.query;
+    console.log("Pagina actual: "+paginaActual)  
+    console.log("Busqueda: "+busqueda)
 
     const expresionRegular = /^[0-9]$/ // Expresion regular para validar que empieza y termina por un numero 
 
     if(!expresionRegular.test(paginaActual)){
-        return res.redirect('/mis-proyectos?pagina=1'); // Si no es un numero o no tiene, redirige a la pagina 1
+        return res.redirect('/mis-proyectos?pagina=1&busqueda='); // Si no es un numero o no tiene, redirige a la pagina 1
     }
 
     const { id } = req.usuario;
@@ -83,6 +93,7 @@ const dashboard = async (req, res) => {
         proyectos,
         paginas: Math.ceil(total / limite),
         paginaActual,
+        busqueda,
         total,
         limite,
         offset
@@ -263,6 +274,7 @@ const eliminarProyecto = async (req, res) => {
 export {
     info,
     inicio,
+    filtro,
     dashboard,
     nuevoProyecto,
     guardarProyecto,
