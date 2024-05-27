@@ -2197,6 +2197,9 @@ html {
 .mt-\[200px\] {
   margin-top: 200px;
 }
+.mr-3 {
+  margin-right: 0.75rem;
+}
 .block {
   display: block;
 }
@@ -2279,6 +2282,12 @@ html {
 }
 .gap-4 {
   gap: 1rem;
+}
+.gap-10 {
+  gap: 2.5rem;
+}
+.gap-32 {
+  gap: 8rem;
 }
 .rounded {
   border-radius: 0.25rem;

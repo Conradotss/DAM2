@@ -1,29 +1,30 @@
 extends ../layout/inicio 
 
 block contenido 
-    h1(class="text-white text-5xl font-extrabold italic text-center mt-4 mb-14")=pagina
+    div(class="py-10")
+        h1(class="text-white text-5xl font-extrabold italic text-center mb-14")=pagina
 
-    div(class="py-10") 
-        //-Linea para imprimir datos en la pagina web -->pre=JSON.stringify(proyecto, undefined, 2)
+        div(class="py-10") 
+            //-Linea para imprimir datos en la pagina web -->pre=JSON.stringify(proyecto, undefined, 2)
 
-        div(class="bg-transparent text-white mx-3 lg:w-full md:mx-auto md:max-w-md sm:mx-auto sm:max-w-md rounded-lg")
-            div(class="card-body")
-                h2(class="text-center font-bold text-4xl mb-6 underline") Proyecto: #{proyecto.titulo}
-                p(class="font-bold text-2xl text-start mb-2") Descripcion: 
-                    span #{proyecto.descripcion}
-                p(class="font-bold text-2xl text-start mb-2") Autor: #{proyecto.autor}
-                p(class="font-bold text-2xl text-start mb-2") Tecnologia: #{proyecto.tecnologia}
-                p(class="font-bold text-2xl text-start mb-2") Fecha de creación: #{proyecto.createdAt}
-                p(class="font-bold text-2xl text-start mb-2") Última modificación: #{proyecto.updatedAt}
-                
-            div(class="mt-6")
-                h2(class="text-center font-bold text-4xl mb-6 underline") Archivos
-                each archivo in proyecto.archivos
-                    a(href=archivo.ruta_almacenamiento, download class="flex flex-col justify-center items-center") 
-                        button(class="button")
-                            span(class="button_lg")
-                                span(class="button_sl")
-                                span(class="button_text") Descargar #{archivo.nombre}
+            div(class=" text-white mx-3 carta mr-3")
+                div(class="card-body")
+                    h2(class="text-center font-bold text-4xl mb-6 underline") Información sobre el proyecto
+                    p(class="font-bold text-2xl text-start mb-2") - Descripción: 
+                        span #{proyecto.descripcion}
+                    p(class="font-bold text-2xl text-start mb-2") - Autor: #{proyecto.autor}
+                    p(class="font-bold text-2xl text-start mb-2") - Tecnología: #{proyecto.tecnologia}
+                    p(class="font-bold text-2xl text-start mb-2") - Fecha de creación: #{proyecto.createdAt}
+                    p(class="font-bold text-2xl text-start mb-2") - Última modificación: #{proyecto.updatedAt}
+                    
+                div(class="mt-6")
+                    h2(class="text-center font-bold text-4xl mb-6 underline") Archivos
+                    each archivo in proyecto.archivos
+                        a(href=archivo.ruta_almacenamiento, download class="flex flex-col justify-center items-center") 
+                            button(class="button")
+                                span(class="button_lg")
+                                    span(class="button_sl")
+                                    span(class="button_text") Descargar #{archivo.nombre}
             
                 
             
