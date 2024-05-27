@@ -33,7 +33,7 @@ const inicio = async (req, res) => {
     } );
 
     if(!proyecto){
-        return res.redirect('/404');
+        return res.redirect('/mis-proyectos');
     }
 
     res.render('gestion/mostrar', {
@@ -45,8 +45,9 @@ const inicio = async (req, res) => {
 const dashboard = async (req, res) => {
     const { pagina: paginaActual, busqueda } = req.query;
     console.log("Pagina actual: "+paginaActual)  
-    console.log("Busqueda: "+busqueda)
-
+    console.log("Busqueda: "+busqueda) 
+    console.log("hijo de puta "+req.exceso) 
+    let exceso = false;
     const expresionRegular = /^[0-9]$/ // Expresion regular para validar que empieza y termina por un numero 
 
     if(!expresionRegular.test(paginaActual)){
@@ -57,6 +58,12 @@ const dashboard = async (req, res) => {
 
     const limite = 8;
     const offset = ((paginaActual * limite) - limite)
+
+    const totalProyectosUsuario = await Proyecto.count({ where: { usuarioId: id } });
+
+    if(totalProyectosUsuario >= 10){
+        exceso = true;
+    }    
 
     const whereOptions = {
         usuarioId: id
@@ -94,14 +101,25 @@ const dashboard = async (req, res) => {
         paginas: Math.ceil(total / limite),
         paginaActual,
         busqueda,
+        exceso,
         total,
         limite,
         offset
     });
 }
 
-const nuevoProyecto = (req, res) =>
+const nuevoProyecto = async (req, res) =>
 {
+    const{id} = req.usuario;
+
+    const totalProyectosUsuario = await Proyecto.count({ where: { usuarioId: id } });
+
+    console.log("Total de proyectos del usuario: "+totalProyectosUsuario);
+
+    if(totalProyectosUsuario >= 10){
+        return res.redirect('/mis-proyectos');
+    }
+
     res.render('gestion/nuevo-proyecto',{
         pagina: 'Crea tu nuevo proyecto',
         csrfToken: req.csrfToken(),
