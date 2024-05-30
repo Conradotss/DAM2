@@ -20,10 +20,22 @@ const Proyecto = db.define('proyectos',{
         type: DataTypes.STRING(100),
         allowNull: false
     },
-    tecnologia: {
+    tutor: {
         type: DataTypes.STRING(100),
         allowNull: false
-    }
+    },
+    tecnologia: {
+        type: DataTypes.STRING(100),
+        allowNull: true
+    },
+    tipo_proyecto: {
+        type: DataTypes.STRING(100),
+        allowNull: false
+    },
+    ciclo: {
+        type: DataTypes.STRING(100),
+        allowNull: false
+    },
 });
 
 export default Proyecto;

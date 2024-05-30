@@ -2,6 +2,7 @@ import {unlink} from "node:fs/promises";
 import { validationResult } from "express-validator";
 import {Proyecto, Archivo} from "../models/relaciones.js";
 import {Op} from "sequelize";
+import fs from "fs";
 
 const info = (req, res) => {
     res.render('template/acerca-de', {
@@ -11,12 +12,27 @@ const info = (req, res) => {
 }
 
 const filtro = async (req, res) => {
-    const {busqueda: busquedaAnterior} = req.body;
-    console.log("Busqueda anterior: "+busquedaAnterior)
-
-        return res.redirect(`/mis-proyectos?pagina=1&busqueda=${busquedaAnterior}`); // Si no es un numero o no tiene, redirige a la pagina 1
-    
-
+    const {busquedaTitulo, busquedaTutor, busquedaCiclo} = req.body;
+    console.log("Busqueda titulo: "+busquedaTitulo)
+    console.log("Busqueda tutor: "+busquedaTutor)
+    console.log("Busqueda ciclo: "+busquedaCiclo)
+    if(busquedaTitulo && busquedaTutor && busquedaCiclo){
+        return res.redirect(`/mis-proyectos?pagina=1&busquedaTitulo=${busquedaTitulo}&busquedaTutor=${busquedaTutor}&busquedaCiclo=${busquedaCiclo}`); 
+    }else if(busquedaTitulo && !busquedaTutor && !busquedaCiclo){
+        return res.redirect(`/mis-proyectos?pagina=1&busquedaTitulo=${busquedaTitulo}`);
+    }else if(busquedaTitulo && !busquedaTutor && busquedaCiclo){
+        return res.redirect(`/mis-proyectos?pagina=1&busquedaTitulo=${busquedaTitulo}&busquedaCiclo=${busquedaCiclo}`);
+    }else if(busquedaTitulo && busquedaTutor && !busquedaCiclo){
+        return res.redirect(`/mis-proyectos?pagina=1&busquedaTitulo=${busquedaTitulo}&busquedaTutor=${busquedaTutor}`);
+    }else if(!busquedaTitulo && busquedaTutor && !busquedaCiclo){
+        return res.redirect(`/mis-proyectos?pagina=1&busquedaTutor=${busquedaTutor}`);
+    }else if(!busquedaTitulo && busquedaTutor && busquedaCiclo){
+        return res.redirect(`/mis-proyectos?pagina=1&busquedaTutor=${busquedaTutor}&busquedaCiclo=${busquedaCiclo}`);
+    }else if(!busquedaTitulo && !busquedaTutor && busquedaCiclo){
+        return res.redirect(`/mis-proyectos?pagina=1&busquedaCiclo=${busquedaCiclo}`);
+    }else{
+        return res.redirect('/mis-proyectos?pagina=1');
+    }
 }
 
 const inicio = async (req, res) => {
@@ -43,20 +59,18 @@ const inicio = async (req, res) => {
 }
 
 const dashboard = async (req, res) => {
-    const { pagina: paginaActual, busqueda } = req.query;
+    const { pagina: paginaActual, busquedaTitulo, busquedaTutor, busquedaCiclo} = req.query;
     console.log("Pagina actual: "+paginaActual)  
-    console.log("Busqueda: "+busqueda) 
-    console.log("hijo de puta "+req.exceso) 
     let exceso = false;
     const expresionRegular = /^[0-9]$/ // Expresion regular para validar que empieza y termina por un numero 
 
     if(!expresionRegular.test(paginaActual)){
-        return res.redirect('/mis-proyectos?pagina=1&busqueda='); // Si no es un numero o no tiene, redirige a la pagina 1
+        return res.redirect('/mis-proyectos?pagina=1'); // Si no es un numero o no tiene, redirige a la pagina 1
     }
 
     const { id } = req.usuario;
 
-    const limite = 8;
+    const limite = 10;
     const offset = ((paginaActual * limite) - limite)
 
     const totalProyectosUsuario = await Proyecto.count({ where: { usuarioId: id } });
@@ -69,9 +83,19 @@ const dashboard = async (req, res) => {
         usuarioId: id
     };
 
-    if (busqueda) {
+    if (busquedaTitulo) {
         whereOptions.titulo = {
-            [Op.like]: `%${busqueda}%`
+            [Op.like]: `%${busquedaTitulo}%`
+        };
+    }
+    if (busquedaTutor) {
+        whereOptions.tutor = {
+            [Op.like]: `%${busquedaTutor}%`
+        };
+    }
+    if (busquedaCiclo) {
+        whereOptions.ciclo = {
+            [Op.like]: `%${busquedaCiclo}%`
         };
     }
 
@@ -100,7 +124,9 @@ const dashboard = async (req, res) => {
         proyectos,
         paginas: Math.ceil(total / limite),
         paginaActual,
-        busqueda,
+        busquedaTitulo,
+        busquedaTutor,
+        busquedaCiclo,
         exceso,
         total,
         limite,
@@ -138,7 +164,9 @@ const guardarProyecto = async (req, res) => {
             datos: req.body
         })
     }
-    const { titulo, descripcion, tecnologia } = req.body;
+
+    console.log(req.body);
+    const { titulo, descripcion, tutor, tecnologia, proyecto, ciclo } = req.body;
     const {nombre: autor} = req.usuario;
 
     console.log(req.usuario.id)
@@ -149,7 +177,10 @@ const guardarProyecto = async (req, res) => {
             titulo,
             descripcion,
             autor,
+            tutor,
             tecnologia,
+            tipo_proyecto: proyecto,
+            ciclo,
             usuarioId : usuarioId
         });
 
@@ -216,7 +247,12 @@ const guardarArchivos = async (req, res, next) => {
 
  const editarProyecto = async (req, res) => {
     const {id} = req.params;
-    const proyecto = await Proyecto.findByPk(id);
+    const proyecto = await Proyecto.findByPk(id, {
+        include: [{
+            model: Archivo,
+            as: 'archivos'
+        }]
+    });
     if(!proyecto){
         return res.redirect('/mis-proyectos');
     }
@@ -225,13 +261,16 @@ const guardarArchivos = async (req, res, next) => {
     }
     res.render('gestion/editar-proyecto', {
         pagina: `Edita tu proyecto ${proyecto.titulo}`,
-        datos: {id: proyecto.id ,titulo: proyecto.titulo, descripcion: proyecto.descripcion, tecnologia: proyecto.tecnologia},
-        csrfToken: req.csrfToken()
+        csrfToken: req.csrfToken(),
+        datos: {id: proyecto.id ,titulo: proyecto.titulo, descripcion: proyecto.descripcion, tutor: proyecto.tutor, tecnologia: proyecto.tecnologia, proyecto: proyecto.tipo_proyecto, ciclo: proyecto.ciclo},
+        proyecto
     })
 }
 
 const GuardarCambiosProyecto = async (req, res) => {
     let resultado = validationResult(req);
+
+    console.log(req.body);
 
     if(!resultado.isEmpty()){
         return res.render('gestion/editar-proyecto',{
@@ -243,7 +282,28 @@ const GuardarCambiosProyecto = async (req, res) => {
     }
 
     const {id} = req.params;
+    const{nombre} = req.usuario;
     const proyecto = await Proyecto.findByPk(id);
+    const archivos = await Archivo.findAll({
+        where: {
+            proyectoId: proyecto.id
+        }
+    });
+
+
+    for (const archivo of archivos) {
+        if (req.body[`eliminar${archivo.nombre}`]) {
+            console.log(`Eliminar archivo ${archivo.nombre} que se HA SELECCIONADO`)
+            // El checkbox está seleccionado, por lo que el archivo debe ser eliminado
+
+            // Elimina el archivo del sistema de archivos
+            fs.unlinkSync(archivo.ruta_almacenamiento);
+
+            // Elimina el archivo de la base de datos
+            await archivo.destroy();
+        }
+    }
+
     if(!proyecto){
         return res.redirect('/mis-proyectos');
     }
@@ -252,8 +312,8 @@ const GuardarCambiosProyecto = async (req, res) => {
     }
 
     try{
-        const {titulo, descripcion, tecnologia} = req.body;
-        proyecto.set({titulo, descripcion, tecnologia});
+        const { titulo, descripcion, tutor, tecnologia, proyecto: tipo_proyecto, ciclo } = req.body;
+        proyecto.set({titulo, descripcion, tutor, tecnologia, tipo_proyecto, ciclo});
         await proyecto.save();
         res.redirect('/mis-proyectos');
     }catch(error){
@@ -288,6 +348,55 @@ const eliminarProyecto = async (req, res) => {
     }
 }
 
+const agregarMasArchivos = async (req, res) => {
+    const {id} = req.params;
+    const proyecto = await Proyecto.findByPk(id);
+    if(!proyecto){
+        return res.redirect('/mis-proyectos');
+    }
+    if(req.usuario.id !== proyecto.usuarioId){
+        return res.redirect('/mis-proyectos');
+    }
+    res.render('gestion/agregar-archivos-nuevos', {
+        pagina: `Agrega mas archivos a tu proyecto ${proyecto.titulo}`,
+        idProyectoOculto: proyecto.id,
+        csrfToken: req.csrfToken(),
+        proyecto
+    })
+}
+
+const agregarArchivosNuevos = async (req, res) => {
+    const {id} = req.params;
+    const proyecto = await Proyecto.findByPk(id);
+    console.log("ESTAMOS LLEGANDO HASTA AQUI")
+    if(!proyecto){
+        console.log("PERO QUE HA PASAO 1")
+        return res.redirect(`/proyecto/editar/${id}`);
+    }
+    if(req.usuario.id !== proyecto.usuarioId){
+        console.log("PERO QUE HA PASAO")
+        return res.redirect(`/proyecto/editar/${id}`);
+    }
+    try{
+        // Itera sobre cada archivo en req.files
+        for (const file of req.files) {
+            console.log(file);
+            const {originalname, size, destination} = file;
+            const archivo = await Archivo.create({
+                nombre: originalname,
+                peso: size,
+                ruta_almacenamiento: destination+"/" + originalname,
+                proyectoId: proyecto.id,  
+            });
+            console.log(archivo);
+        }
+        return res.redirect(`/proyecto/editar/${id}`);
+
+    }catch(error){
+        console.log(error);
+    }
+}
+
 
 export {
     info,
@@ -300,5 +409,7 @@ export {
     guardarArchivos,
     editarProyecto,
     GuardarCambiosProyecto,
-    eliminarProyecto
+    eliminarProyecto,
+    agregarMasArchivos,
+    agregarArchivosNuevos
 };

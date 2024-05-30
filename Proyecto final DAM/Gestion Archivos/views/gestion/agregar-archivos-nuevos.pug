@@ -1,0 +1,24 @@
+extends ../layout/admin
+
+block styles 
+    link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.9.3/dropzone.css")
+    meta(name="csrf-token" content=csrfToken)
+
+block contenido
+    div(class="py-10")
+        h1(class="text-white font-bold text-4xl text-center ")= pagina
+        if errores
+            div(class="max-w-md mx-auto my-10")
+                each error in errores
+                    div(role="alert" class="alert alert-error h-auto m-3")
+                        svg(xmlns="http://www.w3.org/2000/svg" class="stroke-current shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24")
+                            path(stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z")
+                        span=error.msg
+        div(class="mt-8 mx-3 lg:mx-auto lg:max-w-md md:mx-auto md:max-w-md sm:mx-auto sm:max-w-md drop-shadow-[0_1px_25px_rgba(251,251,251,1)] hover:drop-shadow-[0_1px_20px_rgba(251,251,251,1)]")
+            div(class="bg-white py-8 px-4")
+                form(id="archivos" class="dropzone mb-5" action=`/agregarArchivos/${proyecto.id}` method="POST" noValidate)
+                    input(type="hidden" name="_csrf" value = csrfToken)
+                button( id="aceptar" type="button" class="mtb-6 w-full bg-green-400 text-white font-bold text-2xl rounded-xl uppercase py-2  hover:bg-green-500") Aceptar
+        
+block scripts
+    script(src="/js/agregarArchivos.js")

@@ -25,19 +25,50 @@ block contenido
                         label(for="descripcion" class="block text-gray-700 text-sm font-bold mb-2") Descripción
                         textarea(class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" name="descripcion" placeholder="Descripcion del proyecto")=datos.descripcion?datos.descripcion:''
                     div(class="mb-4")
-                        label(for="tecnologia" class="block text-gray-700 text-sm font-bold mb-2") Tipo de tecnología
-                        select(name="tecnologia" class=" text-center shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline")
-                            option(value="0") --Seleccione--
-                            option(value="JavaScript", selected=datos.tecnologia==='JavaScript'?true:false) JavaScript
-                            option(value="Python", selected=datos.tecnologia==='Python'?true:false) Python
-                            option(value="Java", selected=datos.tecnologia==='Java'?true:false) Java
-                            option(value="C++", selected=datos.tecnologia==='C++'?true:false) C++
-                            option(value="C#", selected=datos.tecnologia==='C#'?true:false) C#
-                            option(value="PHP", selected=datos.tecnologia==='PHP'?true:false) PHP
-                            option(value="Ruby", selected=datos.tecnologia==='Ruby'?true:false) Ruby
-                            option(value="Swift", selected=datos.tecnologia==='Swift'?true:false) Swift
-                            option(value="Go", selected=datos.tecnologia==='Go'?true:false) Go
-                            option(value="TypeScript", selected=datos.tecnologia==='TypeScript'?true:false) TypeScript
-                            option(value="Otros", selected=datos.tecnologia==='Otros'?true:false) Otros
+                        label(for="tutor" class="block text-gray-700 text-sm font-bold mb-2") Tutor
+                        input(type="text" autocomplete="off" name="tutor" id="tutor" placeholder="Tutor del proyecto" value=datos.tutor?datos.tutor:'' class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline")
+                    div(class="mb-4")
+                        label(for="tecnologia" class="block text-gray-700 text-sm font-bold mb-2") Tecnología empleada
+                        input(type="text" autocomplete="off" name="tecnologia" id="tecnologia" placeholder="Tecnología" value=datos.tecnologia?datos.tecnologia:'' class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline")
+                    div(class="mb-4")
+                        label(for="proyecto" class="block text-gray-700 text-sm font-bold mb-2") Tipo de proyecto
+                        input(type="text" autocomplete="off" name="proyecto" id="proyecto" placeholder="Tipo de proyecto" value=datos.proyecto?datos.proyecto:'' class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline")
+                    div(class="mb-4")
+                        label(for="ciclo" class="block text-gray-700 text-sm font-bold mb-2") Ciclo formativo
+                        select(name="ciclo" class=" text-center shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline")
+                            option(value="0" class="font-bold") --Seleccione--
+                            option(value="0" class="font-bold") --FP Básica--
+                            option(value="Agro-jardinería y Composiciones Florales", selected=datos.ciclo==='Agro-jardinería y Composiciones Florales'?true:false) Agro-jardinería y Composiciones Florales
+                            option(value="Actividades auxiliares de carpintería y mueble", selected=datos.ciclo==='Actividades auxiliares de carpintería y mueble'?true:false) Actividades auxiliares de carpintería y mueble
+                            option(value="Actividades auxiliares de comercio", selected=datos.ciclo==='Actividades auxiliares de comercio'?true:false) Actividades auxiliares de comercio
+                            option(value="Operaciones auxiliares de lavandería industrial", selected=datos.ciclo==='Operaciones auxiliares de lavandería industrial'?true:false) Operaciones auxiliares de lavandería industrial
+                            option(value="Operaciones básicas de ofimática", selected=datos.ciclo==='Operaciones básicas de ofimática'?true:false) Operaciones básicas de ofimática
+                            option(value="Servicios auxiliares de peluquería", selected=datos.ciclo==='Servicios auxiliares de peluquería'?true:false) Servicios auxiliares de peluquería
+                            option(value="0" class="font-bold") --FP Grado Medio--
+                            option(value="Actividades Comerciales", selected=datos.ciclo==='Actividades Comerciales'?true:false) Actividades Comerciales
+                            option(value="Cocina y Gastronomía", selected=datos.ciclo==='Cocina y Gastronomía'?true:false) Cocina y Gastronomía
+                            option(value="Cuidados Auxiliares de Enfermería", selected=datos.ciclo==='Cuidados Auxiliares de Enfermería'?true:false) Cuidados Auxiliares de Enfermería
+                            option(value="Farmacia y Parafarmacia", selected=datos.ciclo==='Farmacia y Parafarmacia'?true:false) Farmacia y Parafarmacia
+                            option(value="Gestión Administrativa", selected=datos.ciclo==='Gestión Administrativa'?true:false) Gestión Administrativa
+                            option(value="Instalaciones Eléctricas y Automáticas", selected=datos.ciclo==='Instalaciones Eléctricas y Automáticas'?true:false) Instalaciones Eléctricas y Automáticas
+                            option(value="Peluquería y Cosmética Capilar", selected=datos.ciclo==='Peluquería y Cosmética Capilar'?true:false) Peluquería y Cosmética Capilar
+                            option(value="Sistemas Microinformáticos y Redes", selected=datos.ciclo==='Sistemas Microinformáticos y Redes'?true:false) Sistemas Microinformáticos y Redes
+                            option(value="0" class="font-bold") --FP Grado Superior--
+                            option(value="Acondicionamiento Físico", selected=datos.ciclo==='Acondicionamiento Físico'?true:false) Acondicionamiento Físico
+                            option(value="Administración de Sistemas Informáticos en Red ", selected=datos.ciclo==='Administración de Sistemas Informáticos en Red'?true:false) Administración de Sistemas Informáticos en Red
+                            option(value="Administración y Finanzas ", selected=datos.ciclo==='Administración y Finanzas'?true:false) Administración y Finanzas
+                            option(value="Automatización y Robótica Industrial", selected=datos.ciclo==='Automatización y Robótica Industrial'?true:false) Automatización y Robótica Industrial
+                            option(value="Automoción", selected=datos.ciclo==='Automoción'?true:false) Automoción
+                            option(value="Comercio Internacional", selected=datos.ciclo==='Comercio Internacional'?true:false) Comercio Internacional
+                            option(value="Desarrollo de Aplicaciones Multiplataforma", selected=datos.ciclo==='Desarrollo de Aplicaciones Multiplataforma'?true:false) Desarrollo de Aplicaciones Multiplataforma
+                            option(value="Desarrollo de Aplicaciones Web", selected=datos.ciclo==='Desarrollo de Aplicaciones Web'?true:false) Desarrollo de Aplicaciones Web
+                            option(value="Desarrollo de Proyectos de Instalaciones Térmicas y de Fluidos", selected=datos.ciclo==='ADesarrollo de Proyectos de Instalaciones Térmicas y de Fluidos'?true:false) Desarrollo de Proyectos de Instalaciones Térmicas y de Fluidos
+                            option(value="Diseño en Fabricación Mecánica", selected=datos.ciclo==='Diseño en Fabricación Mecánica'?true:false) Diseño en Fabricación Mecánica
+                            option(value="Educación Infantil", selected=datos.ciclo==='Educación Infantil'?true:false) Educación Infantil
+                            option(value="Energías Renovables", selected=datos.ciclo==='Energías Renovables'?true:false) Energías Renovables
+                            option(value="Higiene Bucodental", selected=datos.ciclo==='Higiene Bucodental'?true:false) Higiene Bucodental
+                            option(value="Mantenimiento Electrónico", selected=datos.ciclo==='Mantenimiento Electrónico'?true:false) Mantenimiento Electrónico
+                            option(value="Prevención de Riesgos Profesionales", selected=datos.ciclo==='Prevención de Riesgos Profesionales'?true:false) Prevención de Riesgos Profesionales
+                            option(value="Transporte y Logística", selected=datos.ciclo==='Transporte y Logística'?true:false) Transporte y Logística
                     div(class="flex justify-center mt-14 hover:cursor-pointer")
-                        input( class="bg-green-400 hover:bg-green-500 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline hover:cursor-pointer" type="submit" value="Agregar archivos") 
+                        input( class="bg-green-400 hover:bg-green-500 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline hover:cursor-pointer" type="submit" value="Agregar archivos")
