@@ -1,6 +1,7 @@
 import {unlink} from "node:fs/promises";
 import { validationResult } from "express-validator";
 import {Proyecto, Archivo} from "../models/relaciones.js";
+import Tutor from "../models/Tutor.js";
 import {Op} from "sequelize";
 import fs from "fs";
 
@@ -137,7 +138,7 @@ const dashboard = async (req, res) => {
 const nuevoProyecto = async (req, res) =>
 {
     const{id} = req.usuario;
-
+    const tutores = await Tutor.findAll();
     const totalProyectosUsuario = await Proyecto.count({ where: { usuarioId: id } });
 
     console.log("Total de proyectos del usuario: "+totalProyectosUsuario);
@@ -149,7 +150,8 @@ const nuevoProyecto = async (req, res) =>
     res.render('gestion/nuevo-proyecto',{
         pagina: 'Crea tu nuevo proyecto',
         csrfToken: req.csrfToken(),
-        datos: {}
+        datos: {},
+        tutores
     })
 }
 

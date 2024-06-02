@@ -1,0 +1,12 @@
+header(class="bg-transparent p-3")
+    div(class="container mx-auto flex justify-between items-center bg")
+        div(class="flex flex-row ")
+
+            a(href="/proyectos-tutor" class="cursor-pointer mt-2 hidden lg:block md:block sm:block") 
+                h1(class="bg-clip-text text-transparent text-2xl bg-gradient-to-r from-green-700 to-white font-extrabold text-center italic ") Gestión
+                    span(class="text-xl font-extrabold text-white") Archivos    
+
+        nav(class="text-white font-bold italic lg:text-lg lg:flex lg:flex-row lg:items-center md:items-center md:flex-row md:flex md:text-lg sm:items-center sm:flex sm:flex-col sm:gap-4 items-center flex flex-col gap-4")
+            form(action="/auth/cerrar-sesion" method="POST" class="") 
+                input(type="hidden", name="_csrf", value=csrfToken)  
+                input(type="submit" value="Cerrar Sesión" class="btn sm:w-[138px] w-full btn-nuetral hover:drop-shadow-[0_1px_60px_rgba(251,251,251,1)]")  

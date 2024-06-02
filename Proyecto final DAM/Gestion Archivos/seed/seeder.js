@@ -1,6 +1,8 @@
 import {exit} from 'node:process'
 import {Archivo, Proyecto, Usuario} from '../models/relaciones.js';
+import Tutor from '../models/Tutor.js';
 import usuarioDemo from './usuarioDemo.js';
+import tutorDemo from './tutorDemo.js';
 import db from '../config/database.js';
 
 const crearProyectos = async () => {
@@ -10,7 +12,8 @@ const crearProyectos = async () => {
         await db.sync();
 
         await Promise.all([
-            Usuario.bulkCreate(usuarioDemo)
+            Usuario.bulkCreate(usuarioDemo),
+            Tutor.bulkCreate(tutorDemo)
         ])
     }catch(error){
         console.log(error);

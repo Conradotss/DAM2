@@ -54,7 +54,29 @@ const emailRecuperarPassword = async (datos) => {
     await transport.sendMail(mailOptions)
 }
 
+const emailComentario =async (datos) => {
+    const transport = nodemailer.createTransport({
+        host: process.env.EMAIL_HOST,
+        port: process.env.EMAIL_PORT,
+        auth: {
+            user: process.env.EMAIL_USER,
+            pass: process.env.EMAIL_PASS,
+        }
+    });
+    console.log(datos)
+    const{nombre, email, emailUsuario, mensaje} = datos
+
+    const mailOptions = {
+        from: email,
+        to: emailUsuario,
+        subject: `Comentario de ${nombre}`,
+        html: `${mensaje}`
+    }
+    await transport.sendMail(mailOptions)
+}
+
 export{
     emailRegistro,
-    emailRecuperarPassword
+    emailRecuperarPassword,
+    emailComentario
 }

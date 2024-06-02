@@ -26,7 +26,10 @@ block contenido
                         textarea(class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" name="descripcion" placeholder="Descripcion del proyecto")=datos.descripcion?datos.descripcion:''
                     div(class="mb-4")
                         label(for="tutor" class="block text-gray-700 text-sm font-bold mb-2") Tutor
-                        input(type="text" autocomplete="off" name="tutor" id="tutor" placeholder="Tutor del proyecto" value=datos.tutor?datos.tutor:'' class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline")
+                        select(name="tutor" class=" text-center shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline")
+                            option(value="0" class="font-bold") --Asigna un tutor--
+                            each tutor in tutores
+                                option(value=tutor.nombre, selected=datos.tutor===tutor.nombre?true:false)=tutor.nombre
                     div(class="mb-4")
                         label(for="tecnologia" class="block text-gray-700 text-sm font-bold mb-2") Tecnología empleada
                         input(type="text" autocomplete="off" name="tecnologia" id="tecnologia" placeholder="Tecnología" value=datos.tecnologia?datos.tecnologia:'' class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline")

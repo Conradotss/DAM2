@@ -1,4 +1,4 @@
-extends ../layout/admin
+extends ../layout/admin-tutor
 
 block contenido 
     div(class="py-10")         
@@ -8,14 +8,14 @@ block contenido
                     svg(xmlns="http://www.w3.org/2000/svg", class="stroke-current shrink-0 h-6 w-6", fill="none", viewBox="0 0 24 24")
                         path(stroke-linecap="round", stroke-linejoin="round", stroke-width="2", d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z")
                     span Has Superado el número máximo de proyectos permitidos
-            h1(class="text-white text-5xl font-extrabold italic text-center mt-4 mb-14")= "Mis proyectos"
+            h1(class="text-white text-5xl font-extrabold italic text-center mt-4 mb-14")= "Proyectos Asignados"
             div(class="gap-2  mb-6")
-                form(action="/mis-proyectos" method="post" class="flex flex-col lg:flex-row md:flex-row sm:flex-col justify-around items-center gap-4")
+                form(action="/proyectos-tutor" method="post" class="flex flex-col lg:flex-row md:flex-row sm:flex-col justify-around items-center gap-4")
                     input(type="hidden", name="_csrf", value=csrfToken) 
                     div(class="form-control lg:w-1/5 md:w-1/4 sm:w-1/3 w-full")
-                        input(type="text" id="busquedaTitulo" name="busquedaTitulo" placeholder="Buscar por título" class="input input-bordered mr-4 ml-2")
+                        input(type="text" id="busquedaTitulo" name="busquedaTitulo" placeholder="Buscar por título" class="input input-bordered mr-4 ml-2" autocomplete="off")
                     div(class="form-control lg:w-1/5 md:w-1/4 sm:w-1/3 w-full")
-                        input(type="text" id="busquedaTutor" name="busquedaTutor" placeholder="Buscar por Tutor" class="input input-bordered mr-4 ml-2")
+                        input(type="text" id="busquedaAutor" name="busquedaAutor" placeholder="Buscar por Autor" class="input input-bordered mr-4 ml-2" autocomplete="off")
                     select(name="busquedaCiclo" id="busquedaCiclo" class="select select-ghost max-w-xs text-white font-semibold lg:w-1/5 md:w-1/4 sm:w-1/3 w-full")
                         option(disabled selected) Selecciona un Ciclo Formativo
                         option(value="0" class="font-bold" disabled ) --FP Básica--
@@ -52,11 +52,11 @@ block contenido
                         option(value="Prevención de Riesgos Profesionales") Prevención de Riesgos Profesionales
                         option(value="Transporte y Logística") Transporte y Logística
                     button(type="submit" class="btn bg-zinc-500 text-white font-bold") Buscar
-            div(class="flex flex-wrap justify-center gap-4")
+            div(class="flex flex-wrap justify-center gap-4")   
                 each proyecto in proyectos
                     div(class="card w-64 bg-base-100 shadow-xl hover:cursor-pointer hover:scale-105 hover:shadow-2xl m-4 transition-all duration-500 ease-in-out")  
                         figure 
-                            a(href=`/proyecto/${proyecto.id}`) 
+                            a(href=`/proyecto-tutor/${proyecto.id}`) 
                                 if proyecto.ciclo === 'Agro-jardinería y Composiciones Florales'
                                     img(src="/img/Agro-jardinería y Composiciones Florales.png", alt="Proyecto")
                                 else if proyecto.ciclo === 'Actividades auxiliares de carpintería y mueble'
@@ -122,14 +122,6 @@ block contenido
                             h2(class="card-title font-bold text-center mb-4")= proyecto.titulo
                             p(class="font-bold text-lg italic")= "Ciclo: " + proyecto.ciclo
 
-                            div(class="flex flex-wrap justify-around mt-4")
-                                div(class="card-actions justify-end")
-                                    a(href=`/proyecto/editar/${proyecto.id}`) 
-                                        button(class="btn w-20 bg-green-500 text-white") Editar
-                                div(class="card-actions justify-end ")
-                                    form(action=`/proyecto/eliminar/${proyecto.id}`, method="POST")
-                                        input(type="hidden", name="_csrf", value=csrfToken) 
-                                        button(class="btn w-20 bg-red-500 text-white") Eliminar
 
             div(class="bg-zinc-900 px-4 py-3 flex items-center justify-between border-b border-gray-200 sm:px-6")
                     div(class="sm:flex-1 sm:flex sm:items-center sm:justify-between text-white")
@@ -148,19 +140,4 @@ block contenido
                 
         else
             h1(class="text-white text-5xl font-extrabold italic text-center mt-4 mb-14")= estado
-
-        
-
-
-        footer(class="flex flex-row justify-center items-center bg-zinc-900 p-3 text-white text-center font-bold italic text-sm mt-4")
-            p(xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/")
-                span(property="dct:title") Gestion Archivos&nbsp;
-                | by 
-                span(property="cc:attributionName") Roy Calderón &nbsp;
-                | is licensed under 
-                a(href="https://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" class="flex flex-row mb-8")
-                    | CC BY-SA 4.0
-                    img(style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt="")
-                    img(style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt="")
-                    img(style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1" alt="")
         //-pre #{JSON.stringify(proyectos, null, 2)}

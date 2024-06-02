@@ -69,7 +69,7 @@ const autenticar = async (req, res) => {
 }
 //Cerrar sesion
 const cerrarSesion = (req, res) => {
-    return res.clearCookie('_token').status(200).redirect('/auth/login') //Limpiamos la cookie con la informacion del usuario y lo redirijimos al login
+    return res.clearCookie('_token').status(200).redirect('/') //Limpiamos la cookie con la informacion del usuario y lo redirijimos al login
 }
 
 
